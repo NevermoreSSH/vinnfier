@@ -35,6 +35,8 @@ echo -e "   \e[$number (•9)\e[m \e[$below Speedtest VPS\e[m"
 echo -e "   \e[$number (10)\e[m \e[$below Install BBR\e[m"
 echo -e "   \e[$number (11)\e[m \e[$below ON/OF Auto Reboot\e[m"
 echo -e "   \e[$number (12)\e[m \e[$below Change Password VPS\e[m"
+echo -e "   \e[$number (13)\e[m \e[$below DNS Changer \e[m"
+echo -e "   \e[$number (14)\e[m \e[$below Netflix Checker \e[m"
 echo -e ""
 echo -e "   \e[$number (99)\e[m \e[$below Update menu VPS\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
@@ -79,6 +81,12 @@ autoreboot
 ;;
 12)
 passwd
+;;
+13)
+dns
+;;
+14)
+netf
 ;;
 99)
 updatemenu
