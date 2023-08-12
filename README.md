@@ -1,33 +1,30 @@
 # BEFORE ANY INSTALLATION OR USAGE, PLEASE READ
 - this script is free to use (strictly no reselling)
-- please don't bother me with domain/subdomain setup and error (do the homework by googling it)
 - tested on digital ocean / linode / shinjiru / myklnet / ovh without any problem
 - enjoy
 
 # FIX SCRIPT
 - backup script issue fix
                                            
-<h2 align="center"> Autoscript By Nevermore (cttro HazzuanHashim)</h2>
+<h2 align="center"> Autoscript By Nevermore</h2>
 
 <h2 align="center"> Supported Linux Distribution</h2>
-<p align="center"><img src="https://linuxconfig.org/wp-content/uploads/2018/05/debian_vs_ubuntu.png"></p>
 <p align="center"><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=debian&label=Debian%2010&message=Buster&color=blue"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=debian&label=Debian%2011&message=Bullseye&color=blue"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2018&message=18.04 LTS&color=blue"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2020&message=20.04 LTS&color=blue"></p>
 
-<p align="center"><img src="https://img.shields.io/badge/Service-OpenSSH-success.svg"> <img src="https://img.shields.io/badge/Service-Dropbear-success.svg">  <img src="https://img.shields.io/badge/Service-Websocket-success.svg"> <img src="https://img.shields.io/badge/Service-BadVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Stunnel-success.svg">  <img src="https://img.shields.io/badge/Service-OpenVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Squid3-success.svg">  <img   src="https://img.shields.io/badge/Service-Webmin-success.svg">  <img src="https://img.shields.io/badge/Service-OHP-success.svg">  <img
-src="https://img.shields.io/badge/Service-Xray-success.svg">  <img src= "https://img.shields.io/badge/Service-SSR-success.svg">  <img src="https://img.shields.io/badge/Service-Trojan Go-success.svg"> <img src="https://img.shields.io/badge/Service-Trojan-success.svg"> <img src="https://img.shields.io/badge/Service-WireGuard-success.svg"> <img src="https://img.shields.io/badge/Service-Shadowsocks-success.svg">
+
 
 ## Commands : <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=powershell&label=Shell&message=Bash%20Script&color=lightgray">
 
 ## Update & Upgrade First Your VPS for Debian 10 & 11
 
   ```html
-  apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+  apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
   ```
 
 ## Update & Upgrade First Your VPS for Ubuntu 18.04 & 20.04
 
   ```html
-  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && sleep 2 && reboot
+  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && reboot
   ```
  
 ## INSTALLATION SCRIPT
@@ -62,8 +59,7 @@ systemctl restart wg-quick@wg0
    ```html
   mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/xraycore_1.7.5.1_linux/xray_1.7.5.1_linux" && chmod 755 /usr/local/bin/xray && restart
   ``` 
-   
-Feedback to owner on Telegram jkeychen <a href="https://t.me/todfix667" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=blue"></a> to fix BUG (slow respond)
+  
 
 # Description :
 
