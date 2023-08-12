@@ -41,7 +41,10 @@ cp -r /etc/crontab /root/backup/crontab &> /dev/null
 cp -r /etc/shadow /root/backup/shadow >/dev/null 2>&1
 cp -r /etc/gshadow /root/backup/gshadow >/dev/null 2>&1
 cp -r /etc/passwd /root/backup/passwd >/dev/null 2>&1
-cp -r /etc/group /root/backup/group >/dev/null 2>&1
+cp -r /etc/wireguard /root/backup/wireguard >/dev/null 2>&1
+cp -r /etc/shadowsocks-libev /root/backup/shadowsocks-libev >/dev/null 2>&1
+cp -r /usr/local/shadowsocksr /root/backup/shadowsocksr >/dev/null 2>&1
+cp -r /home/vps/public_html /root/backup/public_html >/dev/null 2>&1
 cd /root
 zip -rP $InputPass $IP-$date.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date.zip dr:backup/
