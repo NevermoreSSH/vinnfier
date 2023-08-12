@@ -309,7 +309,7 @@ wget -O port-xray "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/c
 wget -O panel-domain "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/menu/panel-domain.sh"
 wget -O system "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/menu/system.sh"
 wget -O themes "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/menu/themes.sh"
-wget -O updatemenu "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/update/updatemenu.sh"
+#wget -O updatemenu "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/update/updatemenu.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x add-ssh
@@ -359,7 +359,7 @@ chmod +x port-xray
 chmod +x panel-domain
 chmod +x system
 chmod +x themes
-chmod +x updatemenu
+#chmod +x updatemenu
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 echo "0 0 * * * root delete" >> /etc/crontab
