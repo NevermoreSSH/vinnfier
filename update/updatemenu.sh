@@ -38,8 +38,14 @@ apt install resolvconf -y
 # download menu
 cd /usr/bin
 wget -O backup "${REPO}backup.sh"
+wget -O backup "${REPO}dns.sh"
+wget -O backup "${REPO}netf.sh"
+wget -O backup "${REPO}system.sh"
 
 chmod +x backup
+chmod +x netf
+chmod +x dns
+chmod +x system
 
 
 cd
