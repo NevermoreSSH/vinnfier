@@ -41,6 +41,8 @@ echo -e "   \e[$number (15)\e[m \e[$below Install Adblock \e[m"
 echo -e "   \e[$number (16)\e[m \e[$below Panel Adblock \e[m"
 echo -e "   \e[$number (17)\e[m \e[$below Change BannerSSH \e[m"
 echo -e ""
+echo -e "   \e[$number (77)\e[m \e[$below Change XRAY-CORE Official 1.7.5\e[m"
+echo -e "   \e[$number (88)\e[m \e[$below Change XRAY-CORE Mod Multipath 1.7.5.1\e[m"
 echo -e "   \e[$number (99)\e[m \e[$below Update menu VPS\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
@@ -99,6 +101,12 @@ helium
 ;;
 17)
 nano /etc/issue.net
+;;
+77)
+mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray_Official_1.7.5/xray" && chmod 755 /usr/local/bin/xray && restart
+;;
+88)
+mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/xraycore_1.7.5.1_linux/xray_1.7.5.1_linux" && chmod 755 /usr/local/bin/xray && restart
 ;;
 99)
 updatemenu
