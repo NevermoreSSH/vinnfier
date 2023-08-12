@@ -38,6 +38,34 @@ username=$(cat /usr/bin/user)
 oid=$(cat /usr/bin/ver)
 exp=$(cat /usr/bin/e)
 clear
+# Getting CPU Information
+cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
+cpu_usage+=" %"
+#Download/Upload today
+dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
+utoday="$(vnstat -i eth0 | grep "today" | awk '{print $5" "substr ($6, 1, 1)}')"
+ttoday="$(vnstat -i eth0 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}')"
+#Download/Upload yesterday
+dyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $2" "substr ($3, 1, 1)}')"
+uyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $5" "substr ($6, 1, 1)}')"
+tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}')"
+#Download/Upload current month
+dmon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $3" "substr ($4, 1, 1)}')"
+umon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $6" "substr ($7, 1, 1)}')"
+tmon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $9" "substr ($10, 1, 1)}')"
+# TOTAL ACC CREATE VMESS WS
+vmess=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
+# TOTAL ACC CREATE  VLESS WS
+vless=$(grep -c -E "^### " "/usr/local/etc/xray/vless.json")
+# TOTAL ACC CREATE  VLESS VISION
+vtls=$(grep -c -E "^### " "/usr/local/etc/xray/xtls.json")
+# TOTAL ACC CREATE  TROJAN GO
+trgo=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
+# TOTAL ACC CREATE  TROJAN WS TLS
+trws=$(grep -c -E "^### " "/usr/local/etc/xray/trojanws.json")
+# TOTAL ACC CREATE OVPN SSH
+total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 
 # STATUS EXPIRED ACTIVE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
@@ -82,19 +110,30 @@ echo -e "\e[$text Premium Script"
 echo -e   " \e[$line════════════════════════════════════════════════════════════\e[m"
 echo -e   " \e[$back_text                    \e[30m[\e[$box SERVER INFORMATION\e[30m ]\e[1m                  \e[m"
 echo -e   " \e[$line════════════════════════════════════════════════════════════\e[m"
+echo -e "  \e[$text Operation System     : "$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)
+echo -e "  \e[$text Kernel               : $(uname -r)"
 echo -e "  \e[$text Cpu Model            :$cname"
 echo -e "  \e[$text Number Of Core       : $cores"
+echo -e "  \e[$text CPU Usage            : $cpu_usage"
 echo -e "  \e[$text Cpu Frequency        :$freq MHz"
 echo -e "  \e[$text Total Amount Of Ram  : $uram MB / $tram MB"
 echo -e "  \e[$text System Uptime        : $uptime"
-echo -e "  \e[$text Isp/Provider Name    : $ISP"
-echo -e "  \e[$text City Location        : $CITY"
-echo -e "  \e[$text Time Location        : $WKT"
+#echo -e "  \e[$text Isp/Provider Name    : $ISP"
+#echo -e "  \e[$text City Location        : $CITY"
+#echo -e "  \e[$text Time Location        : $WKT"
 echo -e "  \e[$text Ip Vps/Address       : $IPVPS"
 echo -e "  \e[$text Domain Name          : $domain\e[0m"
-echo -e "  \e[$text Version Name         : Websocket"
+echo -e "  \e[$text Version Name         : Websocket v2 (latest)"
 echo -e "  \e[$text Certificate Status   : Lifetime"
 echo -e "  \e[$text Provided By          : $creditt"
+echo -e " \e[$line╒════════════════════════════════════════════════════════════╕\e[m"
+echo -e "  \e[$text Traffic\e[0m       \e[${text}Today------------Yesterday------------Month   "
+echo -e "  \e[$text Download\e[0m   \e[${text}   $dtoday    $dyest       $dmon   \e[0m"
+echo -e "  \e[$text Upload\e[0m     \e[${text}   $utoday    $uyest       $umon   \e[0m"
+echo -e "  \e[$text Total\e[0m       \e[${text}  $ttoday    $tyest       $tmon  \e[0m "
+echo -e " \e[$line╘════════════════════════════════════════════════════════════╛\e[m"
+echo -e " \e[$text Ssh/Ovpn   Vmess   Vless   Vless-vision   Trojan-Ws   Trojan-GO \e[0m "    
+echo -e " \e[$below    $total_ssh         $vmess       $vless           $vtls           $trws           $trgo \e[0m "
 echo -e   " \e[$line════════════════════════════════════════════════════════════\e[m"
 echo -e   " \e[$back_text                        \e[30m[\e[$box MAIN MENU\e[30m ]\e[1m                       \e[m"
 echo -e   " \e[$line════════════════════════════════════════════════════════════\e[m"
