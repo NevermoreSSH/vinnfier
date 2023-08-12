@@ -37,7 +37,7 @@ apt install resolvconf -y
 
 # download menu
 cd /usr/bin
-wget -O backup "${REPO}backup"
+wget -O backup "${REPO}backup.sh"
 
 chmod +x backup
 
