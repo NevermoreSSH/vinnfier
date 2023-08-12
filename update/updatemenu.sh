@@ -40,7 +40,7 @@ cd /usr/bin
 wget -O backup "${REPO}backup.sh"
 wget -O dns "${REPO}dns.sh"
 wget -O netf "${REPO}netf.sh"
-wget -O sustem "${REPO}system.sh"
+wget -O system "${REPO}system.sh"
 wget -O menu "${REPO}menu.sh"
 
 chmod +x backup
