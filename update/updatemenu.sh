@@ -32,20 +32,22 @@ REPO="https://raw.githubusercontent.com/NevermoreSSH/vinnfier/adata/update/"
 APT="apt-get -y install"
 start=$(date +%s)
 
-
+# update latest resolvconf for DNS
 apt install resolvconf -y 
 
 # download menu
 cd /usr/bin
 wget -O backup "${REPO}backup.sh"
-wget -O backup "${REPO}dns.sh"
-wget -O backup "${REPO}netf.sh"
-wget -O backup "${REPO}system.sh"
+wget -O dns "${REPO}dns.sh"
+wget -O netf "${REPO}netf.sh"
+wget -O sustem "${REPO}system.sh"
+wget -O menu "${REPO}menu.sh"
 
 chmod +x backup
-chmod +x netf
 chmod +x dns
+chmod +x netf
 chmod +x system
+chmod +x menu
 
 
 cd
