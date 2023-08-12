@@ -37,6 +37,9 @@ echo -e "   \e[$number (11)\e[m \e[$below ON/OF Auto Reboot\e[m"
 echo -e "   \e[$number (12)\e[m \e[$below Change Password VPS\e[m"
 echo -e "   \e[$number (13)\e[m \e[$below DNS Changer \e[m"
 echo -e "   \e[$number (14)\e[m \e[$below Netflix Checker \e[m"
+echo -e "   \e[$number (15)\e[m \e[$below Install Adblock \e[m"
+echo -e "   \e[$number (16)\e[m \e[$below Panel Adblock \e[m"
+echo -e "   \e[$number (17)\e[m \e[$below Change BannerSSH \e[m"
 echo -e ""
 echo -e "   \e[$number (99)\e[m \e[$below Update menu VPS\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
@@ -87,6 +90,15 @@ dns
 ;;
 14)
 netf
+;;
+15)
+ins-helium
+;;
+16)
+helium
+;;
+17)
+nano /etc/issue.net
 ;;
 99)
 updatemenu
