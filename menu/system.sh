@@ -36,11 +36,12 @@ echo -e "   \e[$number (10)\e[m \e[$below Install BBR\e[m"
 echo -e "   \e[$number (11)\e[m \e[$below ON/OF Auto Reboot\e[m"
 echo -e "   \e[$number (12)\e[m \e[$below Change Password VPS\e[m"
 echo -e ""
+echo -e "   \e[$number (99)\e[m \e[$below Update menu VPS\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
 echo -e "\e[$line"
-read -p "        Please Input Number  [1-15 or x] :  "  sys
+read -p "        Please Input Number  [1-99 or x] :  "  sys
 echo -e ""
 case $sys in
 1)
@@ -78,6 +79,9 @@ autoreboot
 ;;
 12)
 passwd
+;;
+99)
+updatemenu
 ;;
 x)
 menu
