@@ -141,3 +141,96 @@ sed -i "/^### $user $exp/d" "/etc/trojan-go/akun.conf"
 fi
 done
 systemctl restart trojan-go
+
+# FIX AUTO DELETE V2
+#----- Auto Remove Vmess
+data=( `cat /usr/local/etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^### $user" "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+sed -i "/^### $user $exp/,/^},{/d" /usr/local/etc/xray/config.json
+sed -i "/^### $user $exp/,/^},{/d" /usr/local/etc/xray/none.json
+rm -f /usr/local/etc/xray/$user-tls.json
+rm -f /usr/local/etc/xray/$user-none.json
+rm -f /usr/local/etc/xray/$user-clash-for-android.yaml
+rm -f /home/vps/public_html/$user-clash-for-android.yaml
+systemctl restart xray
+systemctl restart xray@none
+fi
+done
+
+#----- Auto Remove Vless
+data=( `cat /usr/local/etc/xray/vless.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^### $user" "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 3 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+sed -i "/^### $user $exp/,/^},{/d" /usr/local/etc/xray/vless.json
+sed -i "/^### $user $exp/,/^},{/d" /usr/local/etc/xray/vnone.json
+systemctl restart xray@vless
+systemctl restart xray@vnone
+fi
+done
+
+#----- Auto Remove Trojan WS
+data=( `cat /usr/local/etc/xray/trojanws.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^### $user" "/usr/local/etc/xray/trojanws.json" | cut -d ' ' -f 3 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+sed -i "/^### $user $exp/,/^},{/d" /usr/local/etc/xray/trojanws.json
+sed -i "/^### $user $exp/,/^},{/d" /usr/local/etc/xray/trnone.json
+systemctl restart xray@trojanws
+systemctl restart xray@trnone
+fi
+done
+
+#----- Auto Remove Trojan G0
+data=( `cat /etc/trojan-go/akun.conf | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^### $user" "/etc/trojan-go/akun.conf" | cut -d ' ' -f 3 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+sed -i "/^### $user $exp/,/^},{/d" /etc/trojan-go/config.json
+sed -i "/^### $user $exp/,/^},{/d" /etc/trojan-go/akun.conf
+systemctl restart trojan-go
+fi
+done
+
+#----- Auto Remove VLESS TCP XTLS
+data=( `cat /usr/local/etc/xray/xtls.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^### $user" "/usr/local/etc/xray/xtls.json" | cut -d ' ' -f 3 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+sed -i "/^### $user $exp/,/^},{/d" /usr/local/etc/xray/xtls.json
+systemctl restart xray@xtls
+fi
+done
+
+echo -e " Delete Exp User Xray Success (Nevermore)"
+echo 
+echo -e " Back To Menu In 2 Sec"
+sleep 2
+menu
