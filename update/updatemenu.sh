@@ -43,6 +43,7 @@ wget -O netf "${REPO}netf.sh"
 wget -O system "${REPO}system.sh"
 wget -O menu "${REPO}menu.sh"
 wget -O ins-helium "${REPO}ins-helium.sh"
+wget -O xp "${REPO}xp.sh"
 
 chmod +x backup
 chmod +x dns
@@ -50,6 +51,7 @@ chmod +x netf
 chmod +x system
 chmod +x menu
 chmod +x ins-helium
+chmod +x xp
 
 
 cd
