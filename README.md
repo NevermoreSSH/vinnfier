@@ -60,7 +60,7 @@ systemctl restart wg-quick@wg0
   ```
 ## Fix XRAY UPDATE
    ```html
-  mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xray-core-1/releases/download/v1.7.5.1/xray.linux.64bit" && chmod 755 /usr/local/bin/xray && restart
+  mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/xraycore_1.7.5.1_linux/xray_1.7.5.1_linux" && chmod 755 /usr/local/bin/xray && restart
   ``` 
    
 Feedback to owner on Telegram jkeychen <a href="https://t.me/todfix667" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=blue"></a> to fix BUG (slow respond)
