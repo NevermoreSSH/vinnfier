@@ -85,9 +85,9 @@ systemctl restart wg-quick@wg0
   - XRAY Vmess Ws Tls       : 443
   - XRAY Vless Ws Tls       : 443
   - XRAY Trojan Ws Tls      : 443
-  - XRAY Vless Tcp Xtls     : 443
-  - XRAY Vmess Ws None Tls  : 80
-  - XRAY Vless Ws None Tls  : 8080
+  - XRAY Vless Tcp Tls Vision     : 443
+  - XRAY Vmess Ws None Tls  : 8080
+  - XRAY Vless Ws None Tls  : 80
   - XRAY Trojan Ws None Tls : 8880
   - Trojan Go               : 8443
 
@@ -108,16 +108,8 @@ systemctl restart wg-quick@wg0
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## Credit :
-
-*   Hazzuan
-*   Vinstechmy
-*   V-code
-*   ꜱᴀᴍꜱꜰx
-*   jkeychen
-
 
 <p align="center">
-  <a><img src="https://img.shields.io/badge/Copyright%20©-key%20AutoScriptVPN%202022.%20All%20rights%20reserved...-blueviolet.svg" style="max-width:200%;">
+  <a><img src="https://img.shields.io/badge/Copyright%20©-NevermoreSSH%20AutoScriptVPN%202023.%20All%20rights%20reserved...-blueviolet.svg" style="max-width:200%;">
     </p>
    </p>
