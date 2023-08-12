@@ -81,7 +81,7 @@ autoreboot
 passwd
 ;;
 99)
-updatemenu
+wget -q -O /usr/bin/updatemenu "https://raw.githubusercontent.com/NevermoreSSH/vinnfier/adata/update/updatemenu.sh" && chmod +x /usr/bin/updatemenu && updatemenu
 ;;
 x)
 menu
