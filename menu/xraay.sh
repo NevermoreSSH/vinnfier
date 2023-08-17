@@ -589,7 +589,7 @@ sed -i "/^### $user $exp $harini $uuid/,/^},{/d" /usr/local/etc/xray/vnone.json
 rm -f /usr/local/etc/xray/$user-VLESS-WS.yaml
 rm -f /home/vps/public_html/$user-VLESS-WS.yaml
 systemctl restart xray@vless
-systemctl restart xray@none
+systemctl restart xray@vnone
 clear
 echo " Xray Vless Ws Account Deleted Successfully"
 echo " =========================="
