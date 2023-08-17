@@ -284,6 +284,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created  : $harini"
 echo -e "Expired  : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 function menu6 () {
@@ -452,6 +455,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 function menu11 () {
@@ -509,6 +515,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created  : $harini"
 echo -e "Expired  : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 # FUCTION DELETE USER
@@ -555,6 +564,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " =========================="
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 function menu7 () {
@@ -596,6 +608,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " =========================="
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 function menu12 () {
@@ -634,6 +649,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " =========================="
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 # FUCTION RENEW USER
@@ -1019,6 +1037,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created  : $harini"
 echo -e "Expired  : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 function menu9 () {
@@ -1181,6 +1202,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 function menu14 () {
@@ -1235,6 +1259,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created    : $harini"
 echo -e "Expired    : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 }
 
 # FUCTION CEK USER
