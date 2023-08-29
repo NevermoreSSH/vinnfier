@@ -181,14 +181,14 @@ rm -f /root/ohp-dropbear.sh
 rm -f /root/ohp-ssh.sh
 rm -f /root/websocket.sh
 # Colour Default
-echo "1;36m" > /etc/banner
+echo "1;34m" > /etc/banner
 echo "30m" > /etc/box
-echo "1;31m" > /etc/line
-echo "1;32m" > /etc/text
-echo "1;33m" > /etc/below
+echo "1;34m" > /etc/line
+echo "1;37m" > /etc/text
+echo "1;37m" > /etc/below
 echo "47m" > /etc/back
 echo "1;35m" > /etc/number
-echo 3d > /usr/bin/test
+echo Standard > /usr/bin/test
 # Version
 ver=$( curl https://raw.githubusercontent.com/${GitUser}/version-t/main/version.conf )
 history -c
