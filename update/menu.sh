@@ -58,7 +58,7 @@ tmon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $9" "substr (
 vmess=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
 # TOTAL ACC CREATE  VLESS WS
 vless=$(grep -c -E "^### " "/usr/local/etc/xray/vless.json")
-# TOTAL ACC CREATE  VLESS VISION
+# TOTAL ACC CREATE  VLESS XTLS
 vtls=$(grep -c -E "^### " "/usr/local/etc/xray/xtls.json")
 # TOTAL ACC CREATE  TROJAN GO
 trgo=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
@@ -132,8 +132,8 @@ echo -e "  \e[$text Download\e[0m   \e[${text}   $dtoday    $dyest       $dmon  
 echo -e "  \e[$text Upload\e[0m     \e[${text}   $utoday    $uyest       $umon   \e[0m"
 echo -e "  \e[$text Total\e[0m       \e[${text}  $ttoday    $tyest       $tmon  \e[0m "
 echo -e " \e[$line╘════════════════════════════════════════════════════════════╛\e[m"
-echo -e " \e[$text Ssh/Ovpn   Vmess   Vless   Vless-vision   Trojan-Ws   Trojan-GO \e[0m "    
-echo -e " \e[$below    $total_ssh         $vmess       $vless           $vtls           $trws           $trgo \e[0m "
+echo -e " \e[$text Ssh/Ovpn   Vmess   Vless   Vless-XTLS   Trojan-Ws   Trojan-GO \e[0m "    
+echo -e " \e[$below    $total_ssh         $vmess       $vless         $vtls           $trws           $trgo \e[0m "
 echo -e   " \e[$line════════════════════════════════════════════════════════════\e[m"
 echo -e   " \e[$back_text                        \e[30m[\e[$box MAIN MENU\e[30m ]\e[1m                       \e[m"
 echo -e   " \e[$line════════════════════════════════════════════════════════════\e[m"
