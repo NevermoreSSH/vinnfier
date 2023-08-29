@@ -494,8 +494,8 @@ sed -i '/#xtls$/a\### '"$user $exp $harini $uuid"'\
 vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#XTLS-VISION-${user}"
 #vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS-SPLICE-${user}"#
 vlesslink3="vless://${uuid}@${MYIP}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=pay-dcb.u.com.my#XTLS-OREN-${user}"
-vlesslink4="vless://${uuid}@${sts}${domain}:$tls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS-DIRECT-${user}"
-vlesslink5="vless://${uuid}@${sts}${domain}:$tls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS-SPLICE-${user}"
+vlesslink4="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS-DIRECT-${user}"
+vlesslink5="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS-SPLICE-${user}"
 systemctl restart xray@xtls
 clear
 echo -e ""
