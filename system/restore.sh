@@ -29,4 +29,9 @@ cp crontab /etc/
 strt
 rm -rf /root/backup
 rm -f backup.zip
-echo Done
+echo ""
+echo -e "[ ${green}INFO${NC} ] VPS Data Restore Complete !"
+echo ""
+echo -e "[ ${green}INFO${NC} ] Reboot in 5 second"
+sleep 5
+reboot
