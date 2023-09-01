@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# ==================================================
+# =================================================
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
