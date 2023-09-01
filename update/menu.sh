@@ -3,40 +3,16 @@
 GitUser="NevermoreSSH"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
-if [[ "$IP" = "" ]]; then
 domain=$(cat /usr/local/etc/xray/domain)
-else
-domain=$IP
-fi
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
-WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$(free -m | awk 'NR==2 {print $3}')
-swap=$( free -m | awk 'NR==4 {print $2}' )
 clear
 # OS Uptime
 uptime="$(uptime -p | cut -d " " -f 2-10)"
-# USERNAME
-rm -f /usr/bin/user
-username=$( curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $2}' )
-echo "$username" > /usr/bin/user
-# Order ID
-rm -f /usr/bin/ver
-user=$( curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $3}' )
-echo "$user" > /usr/bin/ver
-# validity
-rm -f /usr/bin/e
-valid=$( curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}' )
-echo "$valid" > /usr/bin/e
-# DETAIL ORDER
-username=$(cat /usr/bin/user)
-oid=$(cat /usr/bin/ver)
-exp=$(cat /usr/bin/e)
 clear
 # Getting CPU Information
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
@@ -66,24 +42,6 @@ trgo=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
 trws=$(grep -c -E "^### " "/usr/local/etc/xray/trojanws.json")
 # TOTAL ACC CREATE OVPN SSH
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-
-# STATUS EXPIRED ACTIVE
-Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
-Info="${Green_font_prefix}(Active)${Font_color_suffix}"
-Error="${Green_font_prefix}${Font_color_suffix}${Red_font_prefix}[EXPIRED]${Font_color_suffix}"
-
-today=`date -d "0 days" +"%Y-%m-%d"`
-Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
-if [[ $today < $Exp1 ]]; then
-sts="${Info}"
-else
-sts="${Error}"
-fi
-clear
-# CERTIFICATE STATUS
-d1=$(date -d "$valid" +%s)
-d2=$(date -d "$today" +%s)
-certifacate=$(( (d1 - d2) / 86400 ))
 # PROVIDED
 creditt=$(cat /root/provided)
 # BANNER COLOUR
@@ -118,9 +76,6 @@ echo -e "  \e[$text CPU Usage            : $cpu_usage"
 echo -e "  \e[$text Cpu Frequency        :$freq MHz"
 echo -e "  \e[$text Total Amount Of Ram  : $uram MB / $tram MB"
 echo -e "  \e[$text System Uptime        : $uptime"
-#echo -e "  \e[$text Isp/Provider Name    : $ISP"
-#echo -e "  \e[$text City Location        : $CITY"
-#echo -e "  \e[$text Time Location        : $WKT"
 echo -e "  \e[$text Ip Vps/Address       : $IPVPS"
 echo -e "  \e[$text Domain Name          : $domain\e[0m"
 echo -e "  \e[$text Version Name         : Websocket v2 (latest)"
