@@ -418,8 +418,8 @@ EOF
 
 # Copy config Yaml client ke home directory root agar mudah didownload ( YAML )
 mv /usr/local/etc/xray/$user-VLESS-WS.yaml /home/vps/public_html/$user-VLESS-WS.yaml
-vlesslink1="vless://${uuid}@${sts}${domain}:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=$patch&allowInsecure=1&sni=$sni#VLESS-TLS-${user}"
-vlesslink2="vless://${uuid}@${sts}${domain}:$none?type=ws&encryption=none&security=none&host=$sni&path=$patch#VLESS-NTLS-${user}"
+vlesslink1="vless://${uuid}@${sts}${domain}:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=$patch&allowInsecure=1&sni=$sni#VLESS_TLS_${user}"
+vlesslink2="vless://${uuid}@${sts}${domain}:$none?type=ws&encryption=none&security=none&host=$sni&path=$patch#VLESS_NTLS_${user}"
 vlesslink3="vless://${uuid}@104.22.25.71:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=wss://italeem.iium.edu.my$patch&allowInsecure=1&sni=italeem.iium.edu.my#VLESS-TLS-MERAH-${user}"
 vlesslink4="vless://${uuid}@162.159.134.61:$none?type=ws&encryption=none&security=none&host=${sts}${domain}&path=$patch#VLESS-NTLS-KUNING-${user}"
 vlesslink5="vless://${uuid}@104.20.65.29:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=wss://onlinepayment.celcom.com.my$patch&allowInsecure=1&sni=onlinepayment.celcom.com.my#VLESS-TLS-BIRU-${user}"
@@ -494,8 +494,8 @@ sed -i '/#xtls$/a\### '"$user $exp $harini $uuid"'\
 vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#XTLS-VISION-${user}"
 #vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS-SPLICE-${user}"#
 vlesslink3="vless://${uuid}@${MYIP}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=pay-dcb.u.com.my#XTLS-OREN-${user}"
-vlesslink4="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS-DIRECT-${user}"
-vlesslink5="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS-SPLICE-${user}"
+vlesslink4="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS_DIRECT_${user}"
+vlesslink5="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS_SPLICE_${user}"
 systemctl restart xray@xtls
 clear
 echo -e ""
@@ -1169,8 +1169,8 @@ EOF
 
 # Copy config Yaml client ke home directory root agar mudah didownload ( YAML )
 mv /usr/local/etc/xray/$user-VLESS-WS.yaml /home/vps/public_html/$user-VLESS-WS.yaml
-vlesslink1="vless://${uuid}@${sts}${domain}:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=$patch&allowInsecure=1&sni=$sni#VLESS-TLS-${user}"
-vlesslink2="vless://${uuid}@${sts}${domain}:$none?type=ws&encryption=none&security=none&host=$sni&path=$patch#VLESS-NTLS-${user}"
+vlesslink1="vless://${uuid}@${sts}${domain}:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=$patch&allowInsecure=1&sni=$sni#VLESS_TLS_${user}"
+vlesslink2="vless://${uuid}@${sts}${domain}:$none?type=ws&encryption=none&security=none&host=$sni&path=$patch#VLESS_NTLS_${user}"
 vlesslink3="vless://${uuid}@104.22.25.71:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=wss://italeem.iium.edu.my$patch&allowInsecure=1&sni=italeem.iium.edu.my#VLESS-TLS-MERAH-${user}"
 vlesslink4="vless://${uuid}@162.159.134.61:$none?type=ws&encryption=none&security=none&host=${sts}${domain}&path=$patch#VLESS-NTLS-KUNING-${user}"
 vlesslink5="vless://${uuid}@104.20.65.29:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=wss://onlinepayment.celcom.com.my$patch&allowInsecure=1&sni=onlinepayment.celcom.com.my#VLESS-TLS-BIRU-${user}"
@@ -1241,8 +1241,9 @@ uuid=$(grep -E "^### " "/usr/local/etc/xray/xtls.json" | cut -d ' ' -f 5 | sed -
 vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#XTLS-VISION-${user}"
 #vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS-SPLICE-${user}"#
 vlesslink3="vless://${uuid}@${MYIP}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=pay-dcb.u.com.my#XTLS-OREN-${user}"
-vlesslink4="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS-DIRECT-${user}"
-vlesslink5="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS-SPLICE-${user}"
+vlesslink4="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS_DIRECT_${user}"
+vlesslink5="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS_SPLICE_${user}"
+systemctl restart xray@xtls
 clear
 echo -e ""
 echo -e "\e[$line════════[XRAY VLESS XTLS]════════\e[m"
