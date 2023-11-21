@@ -37,6 +37,8 @@ ohpdrop="$(cat ~/log-install.txt | grep -w "OHP Dropbear" | cut -d: -f2|sed 's/ 
 wsdropbear="$(cat ~/log-install.txt | grep -w "Websocket SSH(HTTP)" | cut -d: -f2|sed 's/ //g')"
 wsstunnel="$(cat ~/log-install.txt | grep -w "Websocket SSL(HTTPS)" | cut -d: -f2|sed 's/ //g')"
 wsovpn="$(cat ~/log-install.txt | grep -w "Websocket OpenVPN" | cut -d: -f2|sed 's/ //g')"
+nsdomain1=$(cat /root/nsdomain)
+pubkey1=$(cat /etc/slowdns/server.pub)
 sleep 1
 echo Ping Host
 echo Check Acces...
@@ -62,7 +64,9 @@ echo -e "Password       : $Pass"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Domain         : $domain"
 echo -e "IP/Host        : $MYIP"
-echo -e "OpenSSH        : 22"
+echo -e "Name Server    : $nsdomain1"
+echo -e "Pubkey         : $pubkey1"
+echo -e "OpenSSH/DNSTT  : 22"
 echo -e "Dropbear       : 442, 109"
 echo -e "SSL/TLS        :$ssl"
 echo -e "WS SSH(HTTP)   : $wsdropbear"
