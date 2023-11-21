@@ -41,8 +41,9 @@ echo -e "   \e[$number (15)\e[m \e[$below Install Adblock \e[m"
 echo -e "   \e[$number (16)\e[m \e[$below Panel Adblock \e[m"
 echo -e "   \e[$number (17)\e[m \e[$below Change BannerSSH \e[m"
 echo -e ""
-echo -e "   \e[$number (66)\e[m \e[$below Change XRAY-CORE Official 1.7.5\e[m"
-echo -e "   \e[$number (77)\e[m \e[$below Change XRAY-CORE Mod Multipath 1.7.5.1\e[m"
+echo -e "   \e[$number (55)\e[m \e[$below Install SlowDNS\e[m"
+echo -e "   \e[$number (66)\e[m \e[$below Install UDP Custom\e[m"
+echo -e "   \e[$number (77)\e[m \e[$below Change XRAY-CORE Official 1.7.5\e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Change XRAY-CORE Mod Multipath 1.7.2-1\e[m"
 echo -e "   \e[$number (99)\e[m \e[$below Update menu VPS\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
@@ -103,11 +104,14 @@ helium
 17)
 nano /etc/issue.net
 ;;
+55)
+wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
+;;
 66)
-mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray-linux-64-v1.7.5/Xray-linux-64-v1.7.5" && chmod 755 /usr/local/bin/xray && xray version
+wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh
 ;;
 77)
-mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray-linux-64-v1.7.5.1/Xray-linux-64-v1.7.5.1" && chmod 755 /usr/local/bin/xray && xray version
+mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray-linux-64-v1.7.5/Xray-linux-64-v1.7.5" && chmod 755 /usr/local/bin/xray && xray version
 ;;
 88)
 mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray-linux-64-v1.7.2-1/Xray-linux-64-v1.7.2-1" && chmod 755 /usr/local/bin/xray && xray version
