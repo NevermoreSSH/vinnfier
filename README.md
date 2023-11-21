@@ -6,7 +6,7 @@
 # FIX SCRIPT
 - backup script issue fix
                                            
-<h2 align="center"> Autoscript By Nevermore</h2>
+<h2 align="center"> Autoscript By NevermoreSSH</h2>
 
 <h2 align="center"> Supported Linux Distribution</h2>
 <p align="center"><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=debian&label=Debian%2010&message=Buster&color=blue"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=debian&label=Debian%2011&message=Bullseye&color=blue"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2018&message=18.04 LTS&color=blue"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2020&message=20.04 LTS&color=blue"></p>
