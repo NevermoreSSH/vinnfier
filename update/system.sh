@@ -40,6 +40,7 @@ echo -e "   \e[$number (14)\e[m \e[$below Netflix Checker \e[m"
 echo -e "   \e[$number (15)\e[m \e[$below Install Adblock \e[m"
 echo -e "   \e[$number (16)\e[m \e[$below Panel Adblock \e[m"
 echo -e "   \e[$number (17)\e[m \e[$below Change BannerSSH \e[m"
+echo -e "   \e[$number (18)\e[m \e[$below Swap RAM \e[m"
 echo -e ""
 echo -e "   \e[$number (66)\e[m \e[$below Install SlowDNS\e[m"
 echo -e "   \e[$number (77)\e[m \e[$below Install UDP Custom\e[m"
@@ -102,6 +103,9 @@ helium
 ;;
 17)
 nano /etc/issue.net
+;;
+18)
+wget -q -O /usr/bin/swapram "https://raw.githubusercontent.com/NevermoreSSH/swapram/main/swapram.sh" && chmod +x /usr/bin/swapram && swapram
 ;;
 66)
 wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
