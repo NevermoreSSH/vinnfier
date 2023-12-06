@@ -54,6 +54,7 @@ chmod +x system
 chmod +x menu
 chmod +x ins-helium
 chmod +x xp
-
-
 cd
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+menu
