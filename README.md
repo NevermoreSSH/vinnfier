@@ -53,12 +53,8 @@ systemctl restart wg-quick@wg0
  ## Script FREE using license key 
 
    ```html
-  ether5btr
+  NevermoreSSH
   ```
-## CUSTOMPATH XRAY-CORE 1.7.5.1
-   ```html
-  mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/xraycore_1.7.5.1_linux/xray_1.7.5.1_linux" && chmod 755 /usr/local/bin/xray && restart
-  ``` 
   
 
 # Description :
