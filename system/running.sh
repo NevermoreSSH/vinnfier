@@ -211,6 +211,24 @@ echo -e " DropBear                : "$green"running"$NC" ✓"
 else
 echo -e " DropBear                : "$red"not running (Error)"$NC" "
 fi
+status="$(systemctl show server-sldns.service --no-page)"
+#status="$(systemctl show client-sldns.service --no-page)"
+status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
+if [ "${status_text}" == "active" ]
+then
+echo -e " SlowDNS                 : "$green"running"$NC" ✓"
+else
+echo -e " SlowDNS                 : "$red"not running (Error)"$NC" "
+fi
+
+status="$(systemctl show udp-custom.service --no-page)"
+status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
+if [ "${status_text}" == "active" ]
+then
+echo -e " UDP Custom              : "$green"running"$NC" ✓"
+else
+echo -e " UDP Custom              : "$red"not running (Error)"$NC" "
+fi
 status="$(systemctl show cdn-dropbear.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
