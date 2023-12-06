@@ -44,18 +44,19 @@ unzip backup.zip
 rm -f backup.zip
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Start Restore . . . "
-#cp -r /root/backup/.acme.sh /root/ &> /dev/null
-#cp -r /root/backup/premium-script /var/lib/ &> /dev/null
-#cp -r /root/backup/xray /usr/local/etc/ &> /dev/null
-#cp -r /root/backup/public_html /home/vps/ &> /dev/null
-cp -r /root/backup/xray/ /usr/local/etc/ >/dev/null
-cp -r /root/backup/crontab /etc/ &> /dev/null
-cp -r /root/backup/cron.d /etc/ &> /dev/null
-cp -r /root/backup/shadow /etc/ &> /dev/null
-cp -r /root/backup/gshadow /etc/ &> /dev/null
-cp -r /root/backup/passwd /etc/ &> /dev/null
-cp -r /root/backup/group /etc/ &> /dev/null
-rm -rf /root/backup
+cd /root/backup
+cp passwd /etc/
+cp group /etc/
+cp shadow /etc/
+cp gshadow /etc/
+cp -r wireguard /etc/
+cp ss.conf /etc/shadowsocks-libev/ss.conf
+cp -r premium-script /var/lib/
+cp -r xray /usr/local/etc/
+cp -r trojan-go /etc/
+cp -r shadowsocksr /usr/local/
+cp -r public_html /home/vps/
+cp crontab /etc/
 rm -f backup.zip
 echo ""
 echo -e "[ ${green}INFO${NC} ] VPS Data Restore Complete !"
