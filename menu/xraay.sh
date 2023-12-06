@@ -287,6 +287,9 @@ echo -e "Script By $creditt"
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu6 () {
@@ -458,6 +461,9 @@ echo -e "Script By $creditt"
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu11 () {
@@ -520,6 +526,9 @@ echo -e "Script By $creditt"
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 # FUCTION DELETE USER
@@ -569,6 +578,9 @@ echo " =========================="
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu7 () {
@@ -613,6 +625,9 @@ echo " =========================="
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu12 () {
@@ -654,6 +669,9 @@ echo " =========================="
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 # FUCTION RENEW USER
@@ -1042,6 +1060,9 @@ echo -e "Script By $creditt"
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu9 () {
@@ -1207,6 +1228,9 @@ echo -e "Script By $creditt"
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu14 () {
@@ -1267,6 +1291,9 @@ echo -e "Script By $creditt"
 #echo ""
 #read -n 1 -s -r -p "Press any key to back on menu xray"
 #xraay
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 # FUCTION CEK USER
@@ -1308,6 +1335,9 @@ fi
 rm -rf /tmp/ipvmess.txt
 rm -rf /tmp/other.txt
 done
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu10 () {
@@ -1348,6 +1378,9 @@ fi
 rm -rf /tmp/ipvless.txt
 rm -rf /tmp/other.txt
 done
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu15 () {
@@ -1389,6 +1422,9 @@ fi
 rm -rf /tmp/ipxray.txt
 rm -rf /tmp/other.txt
 done
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 # MENU XRAY VMESS & VLESS
