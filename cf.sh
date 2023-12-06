@@ -1,5 +1,5 @@
 #!/bin/bash
-# // String / Request Data
+# // String / Request Data anymore
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
