@@ -95,3 +95,6 @@ echo -e "Created  : $harini"
 echo -e "Expired  : $exp1"
 echo -e "----------------------"
 echo -e "Script By $creditt"
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+ssh
