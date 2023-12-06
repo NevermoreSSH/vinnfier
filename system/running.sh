@@ -400,3 +400,5 @@ echo -e "\e[0;34m-----------------------------------------------------------\e[0
 echo -e ""
 #echo -e "${green}JIKA TERDAPAT NOT RUNNING, PLEASE REPORT TO ADMIN FOR FIX$NC"
 #echo -e "${green}TERIMA KASIH DAUN KELADI$NC"
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+menu
