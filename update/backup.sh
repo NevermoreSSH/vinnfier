@@ -25,20 +25,21 @@ clear
 echo " Please Wait VPS Data Backup In Progress . . . "
 echo " "
 echo " Backup SSH & XRAY Account . . . "
-#cp -r /root/.acme.sh /root/backup/ &> /dev/null
-#cp -r /var/lib/premium-script/ /root/backup/premium-script
-#cp -r /usr/local/etc/xray /root/backup/xray
-#cp -r /home/vps/public_html /root/backup/public_html
-cp -r /usr/local/etc/xray/ /root/backup/xray/ >/dev/null 2>&1
-cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
-cp -r /etc/crontab /root/backup/crontab &> /dev/null
-cp -r /etc/shadow /root/backup/shadow >/dev/null 2>&1
-cp -r /etc/gshadow /root/backup/gshadow >/dev/null 2>&1
-cp -r /etc/passwd /root/backup/passwd >/dev/null 2>&1
-cp -r /etc/group /root/backup/group >/dev/null 2>&1
+cp -r /etc/passwd backup/
+cp -r /etc/group backup/
+cp -r /etc/shadow backup/
+cp -r /etc/gshadow backup/
+cp -r /etc/wireguard backup/wireguard
+cp -r /etc/shadowsocks-libev/akun.conf backup/ss.conf
+cp -r /var/lib/premium-script/ backup/premium-script
+cp -r /usr/local/etc/xray backup/xray
+cp -r /etc/trojan-go backup/trojan-go
+cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
+cp -r /etc/crontab backup/crontab
+cp -r /home/vps/public_html backup/public_html
 cd /root
-zip -r $IP-$date-$domain-sapphire.zip backup > /dev/null 2>&1
-rclone copy /root/$IP-$date-$domain-sapphire.zip dr:backup/
+zip -r $IP-$date-$domain-vinnfier.zip backup > /dev/null 2>&1
+rclone copy /root/$IP-$date-$domain-vinnfier.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date-$domain-sapphire.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
@@ -54,5 +55,5 @@ echo -e "\033[1;37m$link\033[0m"
 echo ""
 echo "If you want to restore data, please enter the link above"
 rm -rf /root/backup
-rm -r /root/$IP-$date-$domain-sapphire.zip
+rm -r /root/$IP-$date-$domain-vinnfier.zip
 echo ""
