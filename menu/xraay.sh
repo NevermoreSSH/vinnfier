@@ -719,6 +719,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
 echo " =========================="
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu8 () {
@@ -765,6 +768,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
 echo " =========================="
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu13 () {
@@ -811,6 +817,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
 echo " =========================="
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+xraay
 }
 
 function menu4 () {
