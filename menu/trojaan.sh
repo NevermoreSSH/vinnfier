@@ -198,6 +198,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 function menu2 () {
@@ -240,6 +243,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " =========================="
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 function menu3 () {
@@ -287,6 +293,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
 echo " =========================="
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 function menu4 () {
@@ -448,6 +457,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 function menu5 () {
@@ -488,6 +500,9 @@ fi
 rm -rf /tmp/iptrojan.txt
 rm -rf /tmp/other.txt
 done
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 # TROJAN GO
@@ -603,6 +618,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created  : $harini"
 echo -e "Expired  : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 function menu7 () {
@@ -644,6 +662,9 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " =========================="
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 function menu8 () {
@@ -690,6 +711,9 @@ echo " Client Name : $user"
 echo " Expired On  : $exp4"
 echo " =========================="
 echo ""
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 function menu9 () {
@@ -794,6 +818,9 @@ echo -e "\e[$line═════════════════════
 echo -e "Created  : $harini"
 echo -e "Expired  : $exp"
 echo -e "Script By $creditt"
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 function menu10 () {
@@ -837,6 +864,9 @@ echo "User Login (Ip Address)";
 echo "$oth";
 echo "------------------------------------";
 rm -rf /tmp/other.txt
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+trojaan
 }
 
 # MENU TROJAN
