@@ -287,4 +287,5 @@ fi
 echo ""
 echo -e "${Font_Green}Finished Test${Font_Suffix}"
 echo ""
-read -n1 -r -p "Press any key to continue..."
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+system
