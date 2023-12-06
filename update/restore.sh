@@ -44,34 +44,22 @@ unzip backup.zip
 rm -f backup.zip
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Start Restore . . . "
-cd /root/backup
-cp passwd /etc/
-cp group /etc/
-cp shadow /etc/
-cp gshadow /etc/
-cp -r wireguard /etc/
-cp ss.conf /etc/shadowsocks-libev/ss.conf
-cp -r premium-script /var/lib/
-cp -r xray /usr/local/etc/
-cp -r trojan-go /etc/
-cp -r shadowsocksr /usr/local/
-cp -r public_html /home/vps/
-cp crontab /etc/
+#cd /root/backup
+cp -r /root/backup/passwd /etc/
+cp -r /root/backup/group /etc/
+cp -r /root/backup/shadow /etc/
+cp -r /root/backup/gshadow /etc/
+cp -r /root/backup/wireguard /etc/
+cp -r /root/backup/ss.conf /etc/shadowsocks-libev/ss.conf
+cp -r /root/backup/premium-script /var/lib/
+cp -r /root/backup/xray /usr/local/etc/
+cp -r /root/backup/trojan-go /etc/
+cp -r /root/backup/shadowsocksr /usr/local/
+cp -r /root/backup/public_html /home/vps/
+cp /root/backup/crontab /etc/
 rm -f backup.zip
 echo ""
-echo -e "[ ${green}INFO${NC} ] VPS Data Restore Complete !"
+echo -e "[ ${green}INFO${NC} ] VPS Data Restore Complete, Please restart / reboot first !"
 echo ""
-echo -e "[ ${green}INFO${NC} ] Back to menu . . . "
-systemctl restart nginx
-systemctl restart xray.service
-systemctl restart xray@none.service
-systemctl restart xray@vless.service
-systemctl restart xray@vnone.service
-systemctl restart xray@trojanws.service
-systemctl restart xray@trnone.service
-systemctl restart xray@xtrojan.service
-systemctl restart xray@trojan.service
-service cron restart
-sleep 5
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
 system
-clear
