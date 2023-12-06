@@ -24,14 +24,17 @@ sleep 1
 clear
 echo " Please Wait VPS Data Backup In Progress . . . "
 echo " "
-echo " Backup SSH & XRAY Account . . . "
+echo " Backup SSH Account . . . "
 cp -r /etc/passwd backup/
 cp -r /etc/group backup/
 cp -r /etc/shadow backup/
 cp -r /etc/gshadow backup/
+echo " Backup WireGuard Account . . . "
 cp -r /etc/wireguard backup/wireguard
+echo " Backup ShadowSocks Account . . . "
 cp -r /etc/shadowsocks-libev/akun.conf backup/ss.conf
 cp -r /var/lib/premium-script/ backup/premium-script
+echo " Backup XRAY Account . . . "
 cp -r /usr/local/etc/xray backup/xray
 cp -r /etc/trojan-go backup/trojan-go
 cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
