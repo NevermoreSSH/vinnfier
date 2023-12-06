@@ -51,7 +51,7 @@ exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 exp1=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "Informasi Trial SSH & OpenVPN"
+echo -e "Premium Trial SSH & OpenVPN"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Username       : $Login"
 echo -e "Password       : $Pass"
