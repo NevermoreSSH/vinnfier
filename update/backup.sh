@@ -40,7 +40,7 @@ cp -r /home/vps/public_html backup/public_html
 cd /root
 zip -r $IP-$date-$domain-vinnfier.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date-$domain-vinnfier.zip dr:backup/
-url=$(rclone link dr:backup/$IP-$date-$domain-sapphire.zip)
+url=$(rclone link dr:backup/$IP-$date-$domain-vinnfier.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
 clear
