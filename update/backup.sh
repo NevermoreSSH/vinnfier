@@ -25,21 +25,21 @@ clear
 echo " Please Wait VPS Data Backup In Progress . . . "
 echo " "
 echo " Backup SSH Account . . . "
-cp -r /etc/passwd backup/
-cp -r /etc/group backup/
-cp -r /etc/shadow backup/
-cp -r /etc/gshadow backup/
+cp -r /etc/passwd /root/backup/passwd
+cp -r /etc/group /root/backup/group
+cp -r /etc/shadow /root/backup/shadow
+cp -r /etc/gshadow /root/backup/gshadow
 echo " Backup WireGuard Account . . . "
-cp -r /etc/wireguard backup/wireguard
+cp -r /etc/wireguard /root/backup/wireguard
 echo " Backup ShadowSocks Account . . . "
-cp -r /etc/shadowsocks-libev/akun.conf backup/ss.conf
-cp -r /var/lib/premium-script/ backup/premium-script
+cp -r /etc/shadowsocks-libev/akun.conf /root/backup/ss.conf
+cp -r /var/lib/premium-script/ /root/backup/premium-script
 echo " Backup XRAY Account . . . "
-cp -r /usr/local/etc/xray backup/xray
-cp -r /etc/trojan-go backup/trojan-go
-cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
-cp -r /etc/crontab backup/crontab
-cp -r /home/vps/public_html backup/public_html
+cp -r /usr/local/etc/xray /root/backup/xray
+cp -r /etc/trojan-go /root/backup/trojan-go
+cp -r /usr/local/shadowsocksr/ /root/backup/shadowsocksr
+cp -r /etc/crontab /root/backup/crontab
+cp -r /home/vps/public_html /root/backup/public_html
 cd /root
 zip -r $IP-$date-$domain-vinnfier.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date-$domain-vinnfier.zip dr:backup/
