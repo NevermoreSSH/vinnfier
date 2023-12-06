@@ -398,5 +398,5 @@ echo -e " Squid                   : "$red"not running (Error)"$NC" "
 fi
 echo -e "\e[0;34m-----------------------------------------------------------\e[0m"
 echo -e ""
-echo -e "${green}JIKA TERDAPAT NOT RUNNING, PLEASE REPORT TO ADMIN FOR FIX$NC"
-echo -e "${green}TERIMA KASIH DAUN KELADI$NC"
+#echo -e "${green}JIKA TERDAPAT NOT RUNNING, PLEASE REPORT TO ADMIN FOR FIX$NC"
+#echo -e "${green}TERIMA KASIH DAUN KELADI$NC"
