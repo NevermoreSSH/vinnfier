@@ -13,7 +13,7 @@ orange='\e[0;33m'
 NC='\e[0m'
 clear
 IP=$(wget -qO- icanhazip.com);
-date=$(date +"%Y-%m-%d")
+date=$(date +"%Y-%m-%d-%H:%M:%S")
 domain=$(cat /usr/local/etc/xray/domain)
 clear
 echo " VPS Data Backup By NevermoreSSH "
