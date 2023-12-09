@@ -367,6 +367,7 @@ echo "0 1 * * * root xp" >> /etc/crontab
 echo "0 2 * * * root delete" >> /etc/crontab
 echo "0 6 * * * root backup" >> /etc/crontab
 echo "0 23 * * * root backup" >> /etc/crontab
+echo "1 * * * * root systemctl restart server-sldns" >> /etc/crontab
 # remove unnecessary files
 cd
 apt autoclean -y
