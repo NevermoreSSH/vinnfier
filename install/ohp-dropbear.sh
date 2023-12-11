@@ -8,6 +8,9 @@ GREEN='\e[0;32m'
 BLUE='\e[0;34m'
 NC='\e[0m'
 MYIP=$(wget -qO- https://icanhazip.com);
+MYIP=$(curl -s ipinfo.io/ip )
+MYIP=$(curl -sS ipv4.icanhazip.com)
+MYIP=$(curl -sS ifconfig.me )
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 #Update Repository VPS
