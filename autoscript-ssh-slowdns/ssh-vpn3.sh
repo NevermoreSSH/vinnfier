@@ -10,7 +10,7 @@ NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 ver=$VERSION_ID
 
-#detail nama perusahaan
+#detail nama perusahaan v2
 country=ID
 state=Jakarta
 locality=Manggarai
