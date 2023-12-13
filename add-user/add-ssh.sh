@@ -70,14 +70,14 @@ cat > /home/vps/public_html/ssh-$Login.txt <<-END
               Format SSH OVPN Account
 ====================================================================
 
-═══════════════════════════════════════════════════════
+====================================================================
 Premium Account SSH & OpenVPN
-═══════════════════════════════════════════════════════
+====================================================================
 Username         : $Login
 Password         : $Pass
 Created          : $harini
 Expired          : $exp1
-═══════════════════════════════════════════════════════
+====================================================================
 Domain           : $domain
 Name Server(NS)  : $nsdomain1
 Pubkey           : $pubkey1
@@ -95,25 +95,25 @@ OHP OpenSSH      : $ohpssh
 OHP OpenVPN      : $ovpn3
 Port Squid       :$sqd
 Badvpn(UDPGW)    : 7100-7300
-═══════════════════════════════════════════════════════
+====================================================================
 CONFIG SSH WS
 SSH 22      : $(cat /usr/local/etc/xray/domain):22@$Login:$Pass
 SSH 80      : $(cat /usr/local/etc/xray/domain):80@$Login:$Pass
 SSH 443     : $(cat /usr/local/etc/xray/domain):443@$Login:$Pass
 SSH 1-65535 : $(cat /usr/local/etc/xray/domain):1-65535@$Login:$Pass
-═══════════════════════════════════════════════════════
+====================================================================
 CONFIG OPENVPN
 OpenVPN TCP : $ovpn http://$MYIP:81/client-tcp-$ovpn.ovpn
 OpenVPN UDP : $ovpn2 http://$MYIP:81/client-udp-$ovpn2.ovpn
 OpenVPN SSL : $ovpn4 http://$MYIP:81/client-tcp-ssl.ovpn
 OpenVPN OHP : $ovpn3 http://$MYIP:81/client-tcp-ohp1194.ovpn
-═══════════════════════════════════════════════════════
+====================================================================
 PAYLOAD WS       : GET / HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]"
-═══════════════════════════════════════════════════════
+====================================================================
 PAYLOAD WSS      : GET wss://$sni/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
-═══════════════════════════════════════════════════════
+====================================================================
 PAYLOAD WS OVPN  : GET wss://$sni/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
-═══════════════════════════════════════════════════════
+====================================================================
 
 END
 
