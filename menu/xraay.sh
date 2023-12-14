@@ -431,6 +431,41 @@ vlesslink4="vless://${uuid}@162.159.134.61:$none?type=ws&encryption=none&securit
 vlesslink5="vless://${uuid}@104.20.65.29:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=wss://onlinepayment.celcom.com.my$patch&allowInsecure=1&sni=onlinepayment.celcom.com.my#VLESS-TLS-BIRU-${user}"
 systemctl restart xray@vless
 systemctl restart xray@vnone
+
+cat > /home/vps/public_html/vless-$user.txt <<-END
+
+====================================================================
+             P R O J E C T  O F  N E V E R M O R E S S H
+                       [Freedom Internet]
+====================================================================
+             https://github.com/NevermoreSSH/
+====================================================================
+             Format Vless WS
+====================================================================
+
+             Link Vless Account
+====================================================================
+Remarks          : ${user}
+Domain           : ${domain}
+IP/Host          : $MYIP
+Port TLS         : $tls
+Port None TLS    : $none
+User ID          : ${uuid}
+Encryption       : None
+Network          : WebSocket
+Path Tls         : $patchtls
+Path None Tls    : $patchnontls
+allowInsecure    : True/allow
+====================================================================
+Link TLS : $vlesslink1
+====================================================================
+Link none TLS : $vlesslink2
+====================================================================
+Expired On : $exp
+====================================================================
+
+END
+
 clear
 echo -e ""
 echo -e "\e[$line═════════[XRAY VLESS WS]════════\e[m"
