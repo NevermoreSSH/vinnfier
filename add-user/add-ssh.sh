@@ -40,8 +40,8 @@ ohpdrop="$(cat ~/log-install.txt | grep -w "OHP Dropbear" | cut -d: -f2|sed 's/ 
 wsdropbear="$(cat ~/log-install.txt | grep -w "Websocket SSH(HTTP)" | cut -d: -f2|sed 's/ //g')"
 wsstunnel="$(cat ~/log-install.txt | grep -w "Websocket SSL(HTTPS)" | cut -d: -f2|sed 's/ //g')"
 wsovpn="$(cat ~/log-install.txt | grep -w "Websocket OpenVPN" | cut -d: -f2|sed 's/ //g')"
-nsdomain1=$(cat /root/nsdomain)
-pubkey1=$(cat /etc/slowdns/server.pub)
+#nsdomain1=$(cat /root/nsdomain)
+#pubkey1=$(cat /etc/slowdns/server.pub)
 sleep 1
 echo Ping Host
 echo Check Acces...
@@ -85,8 +85,6 @@ IP/Host          : $MYIP
 OpenSSH          : 22
 Dropbear         : 143, 109
 SSL/TLS          :$ssl
-SlowDNS          : 22,80,443,53,5300
-SSH-UDP          : 1-65535
 WS SSH(HTTP)     : $wsdropbear
 WS SSL(HTTPS)    : $wsstunnel
 WS OpenVPN(HTTP) : $wsovpn
@@ -98,9 +96,8 @@ Badvpn(UDPGW)    : 7100-7300
 ====================================================================
 CONFIG SSH WS
 SSH 22      : $(cat /usr/local/etc/xray/domain):22@$Login:$Pass
-SSH 80      : $(cat /usr/local/etc/xray/domain):80@$Login:$Pass
-SSH 443     : $(cat /usr/local/etc/xray/domain):443@$Login:$Pass
-SSH 1-65535 : $(cat /usr/local/etc/xray/domain):1-65535@$Login:$Pass
+SSH $wsdropbear      : $(cat /usr/local/etc/xray/domain):$wsstunnel@$Login:$Pass
+SSH $wsstunnel     : $(cat /usr/local/etc/xray/domain):$wsstunnel@$Login:$Pass
 ====================================================================
 CONFIG OPENVPN
 OpenVPN TCP : $ovpn http://$MYIP:81/client-tcp-$ovpn.ovpn
@@ -125,13 +122,13 @@ echo -e "Password       : $Pass"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Domain         : $domain"
 echo -e "IP/Host        : $MYIP"
-echo -e "Name Server    : $nsdomain1"
-echo -e "Pubkey         : $pubkey1"
+#echo -e "Name Server    : $nsdomain1"
+#echo -e "Pubkey         : $pubkey1"
 echo -e "OpenSSH/DNSTT  : 22"
 echo -e "Dropbear       : 442, 109"
 echo -e "SSL/TLS        :$ssl"
-echo -e "SlowDNS        : 22,80,443,53,5300"
-echo -e "SSH-UDP        : 1-65535"
+#echo -e "SlowDNS        : 22,80,443,53,5300"
+#echo -e "SSH-UDP        : 1-65535"
 echo -e "WS SSH(HTTP)   : $wsdropbear"
 echo -e "WS SSL(HTTPS)  : $wsstunnel"
 echo -e "WS OpenVPN     : $wsovpn"
