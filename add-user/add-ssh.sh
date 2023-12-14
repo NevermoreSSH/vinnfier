@@ -79,8 +79,6 @@ Created          : $harini
 Expired          : $exp1
 ====================================================================
 Domain           : $domain
-Name Server(NS)  : $nsdomain1
-Pubkey           : $pubkey1
 IP/Host          : $MYIP
 OpenSSH          : 22
 Dropbear         : 143, 109
