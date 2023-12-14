@@ -42,8 +42,8 @@ echo -e "   \e[$number (16)\e[m \e[$below Panel Adblock \e[m"
 echo -e "   \e[$number (17)\e[m \e[$below Change BannerSSH \e[m"
 echo -e "   \e[$number (18)\e[m \e[$below Swap RAM \e[m"
 echo -e ""
-echo -e "   \e[$number (66)\e[m \e[$below Install SlowDNS\e[m"
-echo -e "   \e[$number (77)\e[m \e[$below Install UDP Custom\e[m"
+#echo -e "   \e[$number (66)\e[m \e[$below Install SlowDNS\e[m"
+#echo -e "   \e[$number (77)\e[m \e[$below Install UDP Custom\e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Xray-core Changer\e[m"
 echo -e "   \e[$number (99)\e[m \e[$below Update menu VPS\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
@@ -107,12 +107,12 @@ nano /etc/issue.net
 18)
 wget -q -O /usr/bin/swapram "https://raw.githubusercontent.com/NevermoreSSH/swapram/main/swapram.sh" && chmod +x /usr/bin/swapram && swapram
 ;;
-66)
-wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
-;;
-77)
-wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh
-;;
+#66)
+#wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
+#;;
+#77)
+#wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh
+#;;
 88)
 wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 ;;
