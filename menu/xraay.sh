@@ -541,6 +541,39 @@ vlesslink3="vless://${uuid}@${MYIP}:$xtls?security=tls&encryption=none&headerTyp
 vlesslink4="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS_DIRECT_${user}"
 vlesslink5="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS_SPLICE_${user}"
 systemctl restart xray@xtls
+
+cat > /home/vps/public_html/vlessxtls-$user.txt <<-END
+
+====================================================================
+             P R O J E C T  O F  N E V E R M O R E S S H
+                       [Freedom Internet]
+====================================================================
+             https://github.com/NevermoreSSH/
+====================================================================
+             Format Vless XLTS
+====================================================================
+
+             Link Vless Account
+====================================================================
+Remarks        : ${user}
+Domain         : ${domain}
+Ip/Host        : ${MYIP}
+Port Xtls      : $xtls
+User ID        : ${uuid}
+Encryption     : None
+Network        : TCP
+Flow           : Direct & Splice
+allowInsecure  : True
+====================================================================
+Link Xtls Direct  : ${vlesslink1}
+====================================================================
+Link Xtls Splice  : ${vlesslink2}
+====================================================================
+Expired On : $exp
+====================================================================
+
+END
+
 clear
 echo -e ""
 echo -e "\e[$line════════[XRAY VLESS XTLS]════════\e[m"
