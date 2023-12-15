@@ -247,7 +247,7 @@ rules:
 END
 
 # Copy config Yaml client ke home directory root agar mudah didownload ( YAML )
-mv /usr/local/etc/xray/$user-VMESS-WS.yaml /home/vps/public_html/$user-VMESS-WS.yaml
+mv /usr/local/etc/xray/$user-$exp-VMESS-WS.yaml /home/vps/public_html/$user-$exp-VMESS-WS.yaml
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmesslink1="vmess://$(base64 -w 0 /usr/local/etc/xray/$user-tls.json)"
@@ -282,7 +282,7 @@ echo -e "Link None TLS  : ${vmesslink2}"
 #echo -e "\e[$line═════════════════════════════════\e[m"
 #echo -e "Link BIRU      : ${vmesslink5}"
 #echo -e "\e[$line═════════════════════════════════\e[m"
-#echo -e "Link Yaml  : http://$MYIP:81/$user-VMESS-WS.yaml"
+#echo -e "Link Yaml  : http://$MYIP:81/$user-$exp-VMESS-WS.yaml"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Created  : $harini"
 echo -e "Expired  : $exp"
