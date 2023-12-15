@@ -152,7 +152,7 @@ cat>/usr/local/etc/xray/$user-BIRU.json<<EOF
 }
 EOF
 
-cat > /usr/local/etc/xray/$user-VMESS-WS.yaml <<-END
+cat > /usr/local/etc/xray/$user-$exp-VMESS-WS.yaml <<-END
 # CONFIG CLASH VMESS
 port: 7890
 socks-port: 7891
