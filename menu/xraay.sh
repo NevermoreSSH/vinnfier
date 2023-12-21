@@ -440,7 +440,7 @@ cat > /home/vps/public_html/vless-$user.txt <<-END
 ====================================================================
              https://github.com/NevermoreSSH/
 ====================================================================
-             Format Vless WS
+             Format Vless WS - vinnfieyV2
 ====================================================================
 
              Link Vless Account
@@ -550,7 +550,7 @@ cat > /home/vps/public_html/vlessxtls-$user.txt <<-END
 ====================================================================
              https://github.com/NevermoreSSH/
 ====================================================================
-             Format Vless XLTS
+             Format Vless XLTS - vinnfieyV2
 ====================================================================
 
              Link Vless Account
