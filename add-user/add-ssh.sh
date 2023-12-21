@@ -71,7 +71,7 @@ cat > /home/vps/public_html/ssh-$Login.txt <<-END
 ====================================================================
 
 ====================================================================
-Premium Account SSH & OpenVPN
+Premium Account SSH & OpenVPN - vinnfieyV2
 ====================================================================
 Username         : $Login
 Password         : $Pass
