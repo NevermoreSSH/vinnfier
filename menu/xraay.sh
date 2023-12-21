@@ -438,9 +438,9 @@ cat > /home/vps/public_html/vless-$user.txt <<-END
              P R O J E C T  O F  N E V E R M O R E S S H
                        [Freedom Internet]
 ====================================================================
-             https://github.com/NevermoreSSH/
+             https://github.com/NevermoreSSH/vinnfier
 ====================================================================
-             Format Vless WS - vinnfieyV2
+             Format Vless WS - vinn2
 ====================================================================
 
              Link Vless Account
@@ -548,9 +548,9 @@ cat > /home/vps/public_html/vlessxtls-$user.txt <<-END
              P R O J E C T  O F  N E V E R M O R E S S H
                        [Freedom Internet]
 ====================================================================
-             https://github.com/NevermoreSSH/
+             https://github.com/NevermoreSSH/vinnfier
 ====================================================================
-             Format Vless XLTS - vinnfieyV2
+             Format Vless XLTS - vinn2
 ====================================================================
 
              Link Vless Account
