@@ -106,7 +106,7 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo Generate PresharedKey
 	clear
 	echo -e ""
-	echo -e " Informasi Account Wireguard"
+	echo -e " Premium Account Wireguard"
 	echo -e "\e[$line═══════════[Wireguard]═══════════\e[m"
 	echo -e "User      : $CLIENT_NAME"
 	echo -e "Domain    : $domain"
