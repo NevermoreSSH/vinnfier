@@ -1,6 +1,6 @@
 #!/bin/bash
 # // String / Request Data anymore
-# Getting
+## Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 apt install jq curl -y
