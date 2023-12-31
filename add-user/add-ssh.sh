@@ -98,10 +98,10 @@ SSH $wsdropbear      : $(cat /usr/local/etc/xray/domain):$wsstunnel@$Login:$Pass
 SSH $wsstunnel     : $(cat /usr/local/etc/xray/domain):$wsstunnel@$Login:$Pass
 ====================================================================
 CONFIG OPENVPN
-OpenVPN TCP : $ovpn http://$MYIP:81/client-tcp-$ovpn.ovpn
-OpenVPN UDP : $ovpn2 http://$MYIP:81/client-udp-$ovpn2.ovpn
-OpenVPN SSL : $ovpn4 http://$MYIP:81/client-tcp-ssl.ovpn
-OpenVPN OHP : $ovpn3 http://$MYIP:81/client-tcp-ohp1194.ovpn
+OpenVPN TCP : $ovpn http://$domain:81/client-tcp-$ovpn.ovpn
+OpenVPN UDP : $ovpn2 http://$domain:81/client-udp-$ovpn2.ovpn
+OpenVPN SSL : $ovpn4 http://$domain:81/client-tcp-ssl.ovpn
+OpenVPN OHP : $ovpn3 http://$domain:81/client-tcp-ohp1194.ovpn
 ====================================================================
 PAYLOAD WS       : GET / HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]"
 ====================================================================
@@ -138,10 +138,10 @@ echo -e "Badvpn(UDPGW)  : 7100-7300"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "CONFIG OPENVPN"
 echo -e "--------------"
-echo -e "OpenVPN TCP : $ovpn http://$MYIP:81/client-tcp-$ovpn.ovpn"
-echo -e "OpenVPN UDP : $ovpn2 http://$MYIP:81/client-udp-$ovpn2.ovpn"
-echo -e "OpenVPN SSL : $ovpn4 http://$MYIP:81/client-tcp-ssl.ovpn"
-echo -e "OpenVPN OHP : $ovpn3 http://$MYIP:81/client-tcp-ohp1194.ovpn"
+echo -e "OpenVPN TCP : $ovpn http://$domain:81/client-tcp-$ovpn.ovpn"
+echo -e "OpenVPN UDP : $ovpn2 http://$domain:81/client-udp-$ovpn2.ovpn"
+echo -e "OpenVPN SSL : $ovpn4 http://$domain:81/client-tcp-ssl.ovpn"
+echo -e "OpenVPN OHP : $ovpn3 http://$domain:81/client-tcp-ohp1194.ovpn"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "PAYLOAD WEBSOCKET 1 : GET / HTTP/1.1[crlf]Host: bug.com.$domain[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "\e[$line═════════════════════════════════\e[m"
