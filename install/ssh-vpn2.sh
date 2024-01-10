@@ -363,7 +363,7 @@ chmod +x panel-domain
 chmod +x system
 chmod +x themes
 #chmod +x updatemenu
-echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
+echo "0 5 * * * root reboot" >> /etc/crontab
 echo "0 8 * * * root clear-log" >> /etc/crontab
 echo "0 9 * * * root /usr/bin/clear-log" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
