@@ -78,7 +78,7 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${tyblue}NOTES${NC} ] if you understand then tap enter now"
   read
 else
-  echo -e "[ ${green}INFO${NC} ] Oke installed"
+  echo -e "[ ${green}INFO${NC} ] Okey installed"
 fi
 
 ttet=`uname -r`
