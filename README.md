@@ -1,6 +1,7 @@
 # BEFORE ANY INSTALLATION OR USAGE, PLEASE READ
 - this script is free to use (strictly no reselling)
 - tested on digital ocean / linode / shinjiru / myklnet / ovh without any problem
+- support custompath port 80 only (pls using xraycore mod first)
 - enjoy
 
 # FIX SCRIPT
