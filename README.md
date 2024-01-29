@@ -99,7 +99,7 @@ systemctl restart wg-quick@wg0
    - DDOS Dflate              : [ON]
    - IPtables                 : [ON]
    - Auto-Reboot              : [ON]- 5.00AM
-   - IPv6                     : [OFF]
+   - IPv6                     : [ON/OFF]
    - Auto-Remove-Expired      : [ON]
    - Auto Delete Expired Account
    - Fully automatic script
