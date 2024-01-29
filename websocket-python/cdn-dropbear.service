@@ -1,6 +1,6 @@
 # /usr/local/bin/cdn-dropbear
 [Unit]
-Description=Python WS-Dropbear By Nevermore
+Description=Python WS-Dropbear By NevermoreSSH
 Documentation=https://key.xyz
 After=network.target nss-lookup.target
 
