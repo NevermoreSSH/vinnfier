@@ -75,7 +75,7 @@ systemctl restart wg-quick@wg0
   - OHP SSH                 : 8686
   - OHP OpenVPN             : 8787
   - Websocket SSH(HTTP)     : 8880
-  - Websocket SSL(HTTPS)    : 222
+  - Websocket SSL(HTTPS)    : 8443
   - Websocket OpenVPN       : 2084
   - Squid Proxy             : 3128, 8000
   - Badvpn                  : 7100, 7200, 7300
