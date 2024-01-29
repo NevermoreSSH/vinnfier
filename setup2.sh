@@ -213,7 +213,7 @@ echo "   - Dropbear                : 442, 109"  | tee -a log-install.txt
 echo "   - OHP Dropbear            : 8585"  | tee -a log-install.txt
 echo "   - OHP SSH                 : 8686"  | tee -a log-install.txt
 echo "   - OHP OpenVPN             : 8787"  | tee -a log-install.txt
-echo "   - Websocket SSH(HTTP)     : 2081"  | tee -a log-install.txt
+echo "   - Websocket SSH(HTTP)     : 8880"  | tee -a log-install.txt
 echo "   - Websocket SSL(HTTPS)    : 222"  | tee -a log-install.txt
 echo "   - Websocket OpenVPN       : 2084"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
