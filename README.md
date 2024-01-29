@@ -74,7 +74,7 @@ systemctl restart wg-quick@wg0
   - OHP Dropbear            : 8585
   - OHP SSH                 : 8686
   - OHP OpenVPN             : 8787
-  - Websocket SSH(HTTP)     : 2081
+  - Websocket SSH(HTTP)     : 8880
   - Websocket SSL(HTTPS)    : 222
   - Websocket OpenVPN       : 2084
   - Squid Proxy             : 3128, 8000
