@@ -244,8 +244,8 @@ echo ""  | tee -a log-install.txt
 echo "    [INFORMASI TROJAN]" | tee -a log-install.txt
 echo "    ------------------" | tee -a log-install.txt
 echo "   - Xray Trojan Ws Tls      : 443"  | tee -a log-install.txt
-echo "   - Xray Trojan Ws None Tls : 8880"  | tee -a log-install.txt
-echo "   - Trojan Go               : 8443"  | tee -a log-install.txt
+echo "   - Xray Trojan Ws None Tls : 2095"  | tee -a log-install.txt
+echo "   - Trojan Go               : 2096"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "    [INFORMASI CLASH FOR ANDROID (YAML)]" | tee -a log-install.txt
 echo "    ------------------------------------" | tee -a log-install.txt
