@@ -33,6 +33,16 @@ tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}
 dmon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $3" "substr ($4, 1, 1)}')"
 umon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $6" "substr ($7, 1, 1)}')"
 tmon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $9" "substr ($10, 1, 1)}')"
+# Fixed vnstat for ubuntu v2
+dmon="$(vnstat -m | grep $(date +%Y-%m) | awk '{print $2, $3}')"
+umon="$(vnstat -m | grep $(date +%Y-%m) | awk '{print $5, $6}')"
+tmon="$(vnstat -m | grep $(date +%Y-%m) | awk '{print $8, $9}')"                     # total usage current monthly
+dtoday="$(vnstat -d | grep $(date +%Y-%m-%d) | awk '{print $2, $3}')"
+utoday="$(vnstat -d | grep $(date +%Y-%m-%d) | awk '{print $5, $6}')"
+ttoday="$(vnstat -d | grep $(date +%Y-%m-%d) | awk '{print $8, $9}')"                # today usage
+dyest="$(vnstat -d | grep $(date -d 'yesterday' +%Y-%m-%d) | awk '{print $2, $3}')"
+uyest="$(vnstat -d | grep $(date -d 'yesterday' +%Y-%m-%d) | awk '{print $5, $6}')"
+tyest="$(vnstat -d | grep $(date -d 'yesterday' +%Y-%m-%d) | awk '{print $8, $9}')"  # yesterday usage
 # TOTAL ACC CREATE VMESS WS
 vmess=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
 # TOTAL ACC CREATE  VLESS WS
