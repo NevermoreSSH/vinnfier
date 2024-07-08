@@ -43,7 +43,7 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/awanbebas/vpn2/main/backup/autobackup.sh"
+wget -O autobackup "https://raw.githubusercontent.com/NevermoreSSH/vpn2/main/backup/autobackup.sh"
 wget -O backup "https://raw.githubusercontent.com/awanbebas/vpn2/main/backup/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/awanbebas/vpn2/main/backup/restore.sh"
 wget -O strt "https://raw.githubusercontent.com/awanbebas/vpn2/main/backup/strt.sh"
