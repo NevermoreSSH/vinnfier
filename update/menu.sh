@@ -32,9 +32,9 @@ dyest="$(vnstat -i "$interface1" | grep "yesterday" | awk '{print $2" "substr ($
 uyest="$(vnstat -i "$interface1" | grep "yesterday" | awk '{print $5" "substr ($6, 1, 1)}')"
 tyest="$(vnstat -i "$interface1" | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}')"
 # Download/Upload current month
-dmon="$(vnstat -i "$interface1" -m | grep "$(date +"%b '%y")" | awk '{print $3" "substr ($4, 1, 1)}')"
-umon="$(vnstat -i "$interface1" -m | grep "$(date +"%b '%y")" | awk '{print $6" "substr ($7, 1, 1)}')"
-tmon="$(vnstat -i "$interface1" -m | grep "$(date +"%b '%y")" | awk '{print $9" "substr ($10, 1, 1)}')"
+dmon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $2" "substr ($3, 1, 1)}')"
+umon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $5" "substr ($6, 1, 1)}')"
+tmon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $8" "substr ($9, 1, 1)}')"
 
 # Fixed vnstat for ubuntu v2
 # TOTAL ACC CREATE VMESS WS
