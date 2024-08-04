@@ -7,7 +7,7 @@ domain=$(cat /usr/local/etc/xray/domain)
 IPVPS=$(curl -s ipinfo.io/ip )
 IPVPS=$(curl -s ipinfo.io/ip )
 IPVPS=$(curl -sS ipv4.icanhazip.com)
-IPVPS=$(curl -sS ifconfig.me )
+IPVPS2=$(curl -sS ifconfig.me )
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
@@ -35,6 +35,7 @@ tyest="$(vnstat -i "$interface1" | grep "yesterday" | awk '{print $8" "substr ($
 dmon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $2" "substr ($3, 1, 1)}')"
 umon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $5" "substr ($6, 1, 1)}')"
 tmon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $8" "substr ($9, 1, 1)}')"
+totalmon="$(vnstat | grep "total:" | awk '{print $8, $9}')"
 
 # Fixed vnstat for ubuntu v2
 # TOTAL ACC CREATE VMESS WS
@@ -83,7 +84,7 @@ echo -e "  \e[$text CPU Usage            : $cpu_usage"
 echo -e "  \e[$text Cpu Frequency        :$freq MHz"
 echo -e "  \e[$text Total Amount Of Ram  : $uram MB / $tram MB"
 echo -e "  \e[$text System Uptime        : $uptime"
-echo -e "  \e[$text Ip Vps/Address       : $IPVPS"
+echo -e "  \e[$text Ip Vps/Address       : $IPVPS, $IPVPS2"
 echo -e "  \e[$text Domain Name          : $domain\e[0m"
 echo -e "  \e[$text Version Name         : Websocket v2 (latest)"
 echo -e "  \e[$text Certificate Status   : Lifetime"
@@ -92,7 +93,7 @@ echo -e " \e[$line╒═══════════════════�
 echo -e "  \e[$text Traffic\e[0m       \e[${text}Today      Yesterday       Month   "
 echo -e "  \e[$text Download\e[0m   \e[${text}   $dtoday    $dyest       $dmon   \e[0m"
 echo -e "  \e[$text Upload\e[0m     \e[${text}   $utoday    $uyest       $umon   \e[0m"
-echo -e "  \e[$text Total\e[0m       \e[${text}  $ttoday    $tyest       $tmon  \e[0m "
+echo -e "  \e[$text Total\e[0m       \e[${text}  $ttoday    $tyest       $tmon ($totalmon) \e[0m "
 echo -e " \e[$line╘════════════════════════════════════════════════════════════╛\e[m"
 echo -e " \e[$text Ssh/Ovpn   Vmess   Vless   Vless-XTLS   Trojan-Ws   Trojan-GO \e[0m "    
 echo -e " \e[$below    $total_ssh         $vmess       $vless         $vtls           $trws           $trgo \e[0m "
