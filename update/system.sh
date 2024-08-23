@@ -44,6 +44,7 @@ echo -e "   \e[$number (18)\e[m \e[$below SwapRAM Menu \e[m"
 echo -e ""
 #echo -e "   \e[$number (66)\e[m \e[$below Install SlowDNS\e[m"
 #echo -e "   \e[$number (77)\e[m \e[$below Install UDP Custom\e[m"
+echo -e "   \e[$number (77)\e[m \e[$below Xray-core Changer\e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Xray-core Changer\e[m"
 echo -e "   \e[$number (99)\e[m \e[$below Update menu VPS\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
@@ -113,6 +114,9 @@ wget -q -O /usr/bin/swapram "https://raw.githubusercontent.com/NevermoreSSH/swap
 #77)
 #wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh
 #;;
+77)
+wget -q -O /usr/sbin/setup2 "https://raw.githubusercontent.com/NevermoreSSH/cfwarp/main/setup.sh" && chmod +x /usr/sbin/setup2 && setup2
+;;
 88)
 wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 ;;
