@@ -63,7 +63,7 @@ echo -e   "  \e[$line═══════════════════�
 	# Port Wg
 	wg="$(cat ~/log-install.txt | grep -i Wireguard | cut -d: -f2|sed 's/ //g')"
 
-	# Adguard DNS by default
+	# Cloudflare DNS by default
 	CLIENT_DNS_1="1.1.1.1"
 
 	CLIENT_DNS_2="1.0.0.1"
