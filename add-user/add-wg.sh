@@ -82,12 +82,13 @@ echo -e   "  \e[$line═══════════════════�
 PrivateKey = $CLIENT_PRIV_KEY
 Address = $CLIENT_ADDRESS/24
 DNS = $CLIENT_DNS_1,$CLIENT_DNS_2
+MTU = 1200
 
 [Peer]
 PublicKey = $SERVER_PUB_KEY
 PresharedKey = $CLIENT_PRE_SHARED_KEY
 Endpoint = $ENDPOINT
-AllowedIPs = 0.0.0.0/0,::/0" >>"$HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf"
+AllowedIPs = 0.0.0.0/0" >>"$HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf"
 
 	# Add the client as a peer to the server
 	echo -e "### Client $CLIENT_NAME $exp
