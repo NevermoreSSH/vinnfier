@@ -55,6 +55,7 @@ chmod +x menu
 chmod +x ins-helium
 chmod +x xp
 cd
+wget https://github.com/JebonRX/block-torrent-on-server/raw/main/btorrent.sh && chmod +x btorrent.sh && bash btorrent.sh
 echo ""
 read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
 menu
