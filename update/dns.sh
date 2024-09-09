@@ -94,10 +94,10 @@ if [ "$answer" = 'y' ] || [ "$answer" = 'Y' ]; then
 rm /root/dns
 echo ""
 echo -e "[ ${G}INFO${NC} ] Delete Resolv.conf DNS"
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "nameserver 1.1.1.1" > /etc/resolv.conf
 sleep 1
 echo -e "[ ${G}INFO${NC} ] Delete Resolv.conf.d/head DNS"
-echo "nameserver 8.8.8.8" > /etc/resolvconf/resolv.conf.d/head
+echo "nameserver 1.1.1.1" > /etc/resolvconf/resolv.conf.d/head
 sleep 1
 else if [ "$answer" = 'n' ] || [ "$answer" = 'N' ]; then
 echo -e ""
