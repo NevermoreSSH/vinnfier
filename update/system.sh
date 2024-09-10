@@ -121,7 +121,7 @@ wget -q -O /usr/sbin/setup2 "https://raw.githubusercontent.com/NevermoreSSH/cfwa
 wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 ;;
 99)
-updatemenu
+wget -q -O /usr/bin/updatemenu "https://raw.githubusercontent.com/NevermoreSSH/vinnfier/adata/update/updatemenu.sh" && chmod +x /usr/bin/updatemenu && updatemenu
 ;;
 x)
 menu
