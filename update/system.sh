@@ -44,6 +44,7 @@ echo -e "   \e[$number (18)\e[m \e[$below SwapRAM Menu \e[m"
 echo -e ""
 #echo -e "   \e[$number (66)\e[m \e[$below Install SlowDNS\e[m"
 #echo -e "   \e[$number (77)\e[m \e[$below Install UDP Custom\e[m"
+echo -e "   \e[$number (66)\e[m \e[$below Install Anti-Torrent \e[m"
 echo -e "   \e[$number (77)\e[m \e[$below Install Cloudflare WARP+ \e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Xray-core Changer\e[m"
 echo -e "   \e[$number (99)\e[m \e[$below Update menu VPS\e[m"
@@ -114,6 +115,9 @@ wget -q -O /usr/bin/swapram "https://raw.githubusercontent.com/NevermoreSSH/swap
 #77)
 #wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh
 #;;
+66)
+wget https://github.com/JebonRX/block-torrent-on-server/raw/main/btorrent.sh && chmod +x btorrent.sh && bash btorrent.sh
+;;
 77)
 wget -q -O /usr/sbin/setup2 "https://raw.githubusercontent.com/NevermoreSSH/cfwarp/main/setup.sh" && chmod +x /usr/sbin/setup2 && setup2
 ;;
