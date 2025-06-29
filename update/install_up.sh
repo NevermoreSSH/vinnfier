@@ -35,6 +35,7 @@ wget -q -O /usr/bin/del-ws "https://raw.githubusercontent.com/artanodrop/v4/main
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/artanodrop/v4/main/ssh/xp.sh" && chmod +x /usr/bin/xp
 wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/artanodrop/v4/main/ssh/autokill.sh" && chmod +x /usr/bin/autokill
 wget -q -O /usr/bin/add-host "https://raw.githubusercontent.com/artanodrop/v4/main/ssh/add-host.sh" && chmod +x /usr/bin/add-host
+wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 wget https://raw.githubusercontent.com/awanbebas/vpn2/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 echo -e " [INFO] Update Successfully"
 sleep 2
