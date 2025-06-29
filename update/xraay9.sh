@@ -1419,33 +1419,33 @@ echo -e "   \e[$line════════════════════
 echo -e "   \e[$back_text   \e[30m═[\e[$box PANEL XRAY VMESS WEBSOCKET TLS\e[30m ]═   \e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
 echo -e "    \e[$number (•1)\e[m \e[$below Create Vmess Websocket Account\e[m"
-echo -e "    \e[$number (•2)\e[m \e[$below Trial User Vmess Websocket\e[m"
-echo -e "    \e[$number (•3)\e[m \e[$below Delete Vmess Websocket Account\e[m"
-echo -e "    \e[$number (•4)\e[m \e[$below Renew Vmess Websocket Account\e[m"
-echo -e "    \e[$number (•5)\e[m \e[$below Show Config Vmess Account\e[m"
-echo -e "    \e[$number (•6)\e[m \e[$below Check User Login Vmess\e[m"
+#echo -e "    \e[$number (•2)\e[m \e[$below Trial User Vmess Websocket\e[m"
+echo -e "    \e[$number (•2)\e[m \e[$below Delete Vmess Websocket Account\e[m"
+echo -e "    \e[$number (•3)\e[m \e[$below Renew Vmess Websocket Account\e[m"
+echo -e "    \e[$number (•4)\e[m \e[$below Show Config Vmess Account\e[m"
+echo -e "    \e[$number (•5)\e[m \e[$below Check User Login Vmess\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total1} Client\e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text   \e[30m═[\e[$box PANEL XRAY VLESS WEBSOCKET TLS\e[30m ]═   \e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "    \e[$number (•7)\e[m \e[$below Create Vless Websocket Account\e[m"
-echo -e "    \e[$number (•8)\e[m \e[$below Trial User Vless Websocket\e[m"
-echo -e "    \e[$number (•9)\e[m \e[$below Deleting Vless Websocket Account\e[m"
-echo -e "    \e[$number (10)\e[m \e[$below Renew Vless Websocket Account\e[m"
-echo -e "    \e[$number (11)\e[m \e[$below Show Config Vless Account\e[m"
-echo -e "    \e[$number (12)\e[m \e[$below Check User Login Vless\e[m"
+echo -e "    \e[$number (•6)\e[m \e[$below Create Vless Websocket Account\e[m"
+#echo -e "    \e[$number (•8)\e[m \e[$below Trial User Vless Websocket\e[m"
+echo -e "    \e[$number (•7)\e[m \e[$below Deleting Vless Websocket Account\e[m"
+echo -e "    \e[$number (8)\e[m \e[$below Renew Vless Websocket Account\e[m"
+echo -e "    \e[$number (9)\e[m \e[$below Show Config Vless Account\e[m"
+echo -e "    \e[$number (10)\e[m \e[$below Check User Login Vless\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total2} Client\e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text\e[30m═[\e[$box XRAY VLESS TCP XTLS(Direct & Splice)\e[30m ]═\e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "    \e[$number (13)\e[m \e[$below Create Xray VLess Xtls Account\e[m"
-echo -e "    \e[$number (14)\e[m \e[$below Trial User Vless Xtls\e[m"
-echo -e "    \e[$number (15)\e[m \e[$below Deleting Xray Vless Xtls Account\e[m"
-echo -e "    \e[$number (16)\e[m \e[$below Renew Xray Vless Xtls Account\e[m"
-echo -e "    \e[$number (17)\e[m \e[$below Show Config Vless Xtls Account\e[m"
-echo -e "    \e[$number (18)\e[m \e[$below Check User Login Vless Xtls\e[m"
+echo -e "    \e[$number (11)\e[m \e[$below Create Xray VLess Xtls Account\e[m"
+#echo -e "    \e[$number (14)\e[m \e[$below Trial User Vless Xtls\e[m"
+echo -e "    \e[$number (12)\e[m \e[$below Deleting Xray Vless Xtls Account\e[m"
+echo -e "    \e[$number (13)\e[m \e[$below Renew Xray Vless Xtls Account\e[m"
+echo -e "    \e[$number (14)\e[m \e[$below Show Config Vless Xtls Account\e[m"
+echo -e "    \e[$number (15)\e[m \e[$below Check User Login Vless Xtls\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
@@ -1484,12 +1484,6 @@ elif [[ "$num" = "14" ]]; then
 menu14
 elif [[ "$num" = "15" ]]; then
 menu15
-elif [[ "$num" = "16" ]]; then
-menu16
-elif [[ "$num" = "17" ]]; then
-menu17
-elif [[ "$num" = "18" ]]; then
-menu18
 elif [[ "$num" = "x" ]]; then
 menu
 else
