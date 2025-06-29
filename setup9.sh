@@ -108,7 +108,7 @@ sleep 2
 #install ssh ovpn
 echo -e "\e[0;32mINSTALLING SSH & OVPN...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/install/ssh-vpn9.sh && chmod +x ssh-vpn9.sh && screen -S ssh-vpn9 ./ssh-vpn9.sh
 echo -e "\e[0;32mDONE INSTALLING SSH & OVPN\e[0m"
 clear
 #install ssr
@@ -169,7 +169,7 @@ mkdir -p /home/vps/public_html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/vps.conf"
 /etc/init.d/nginx restart
 #finish
-rm -f /root/ssh-vpn.sh
+rm -f /root/ssh-vpn9.sh
 rm -f /root/wg.sh
 rm -f /root/ss.sh
 rm -f /root/ssr.sh
