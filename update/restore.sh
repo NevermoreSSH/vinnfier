@@ -50,6 +50,7 @@ cp -r /root/backup/group /etc/
 cp -r /root/backup/shadow /etc/
 cp -r /root/backup/gshadow /etc/
 cp -r /root/backup/wireguard /etc/
+cp -r /root/backup/openvpn /etc/
 cp -r /root/backup/ss.conf /etc/shadowsocks-libev/ss.conf
 cp -r /root/backup/premium-script /var/lib/
 cp -r /root/backup/xray /usr/local/etc/
