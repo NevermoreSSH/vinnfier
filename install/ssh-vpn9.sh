@@ -310,7 +310,7 @@ wget -O bbr "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/system/
 wget -O port-ohp "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/change-port/port-ohp.sh"
 wget -O port-xray "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/change-port/port-xray.sh"
 wget -O panel-domain "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/menu/panel-domain.sh"
-wget -O system "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/menu/system2.sh"
+wget -O system "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/menu/system9.sh"
 wget -O themes "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/menu/themes.sh"
 #wget -O updatemenu "https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/update/updatemenu.sh"
 chmod +x add-host
