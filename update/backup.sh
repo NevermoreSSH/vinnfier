@@ -29,8 +29,9 @@ cp -r /etc/passwd /root/backup/passwd
 cp -r /etc/group /root/backup/group
 cp -r /etc/shadow /root/backup/shadow
 cp -r /etc/gshadow /root/backup/gshadow
-echo " Backup WireGuard Account . . . "
+echo " Backup WireGuard n Openvpn Account . . . "
 cp -r /etc/wireguard /root/backup/wireguard
+cp -r /etc/openvpn /root/backup/openvpn
 echo " Backup ShadowSocks Account . . . "
 cp -r /etc/shadowsocks-libev/akun.conf /root/backup/ss.conf
 cp -r /var/lib/premium-script/ /root/backup/premium-script
