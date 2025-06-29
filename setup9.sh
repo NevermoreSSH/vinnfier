@@ -127,7 +127,7 @@ clear
 #install Xray
 echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/install/ins-xray3.sh && chmod +x ins-xray3.sh && screen -S ins-xray3 ./ins-xray3.sh
+wget https://raw.githubusercontent.com/${GitUser}/vinnfier/adata/install/ins-xray9.sh && chmod +x ins-xray9.sh && screen -S ins-xray9 ./ins-xray9.sh
 echo -e "\e[0;32mDONE INSTALLING XRAY CORE\e[0m"
 clear
 #install Trojan GO
@@ -173,7 +173,7 @@ rm -f /root/ssh-vpn.sh
 rm -f /root/wg.sh
 rm -f /root/ss.sh
 rm -f /root/ssr.sh
-rm -f /root/ins-xray3.sh
+rm -f /root/ins-xray9.sh
 rm -f /root/trojan-go.sh
 rm -f /root/set-br.sh
 rm -f /root/ohp.sh
