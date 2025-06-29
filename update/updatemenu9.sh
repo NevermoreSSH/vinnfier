@@ -53,9 +53,9 @@ wget -O restore "${REPO}restore.sh"
 wget -O dns "${REPO}dns.sh"
 wget -O netf "${REPO}netf.sh"
 wget -O system "${REPO}system.sh"
-wget -O menu "${REPO}menu2.sh"
+wget -O menu "${REPO}menu9.sh"
 wget -O ins-helium "${REPO}ins-helium.sh"
-wget -O xp "${REPO}xp2.sh"
+wget -O xp "${REPO}xp9.sh"
 
 chmod +x backup
 chmod +x restore
