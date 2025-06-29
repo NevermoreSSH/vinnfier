@@ -56,6 +56,7 @@ wget -O system "${REPO}system.sh"
 wget -O menu "${REPO}menu9.sh"
 wget -O ins-helium "${REPO}ins-helium.sh"
 wget -O xp "${REPO}xp9.sh"
+wget -O xraay "${REPO}xraay9.sh"
 
 chmod +x backup
 chmod +x restore
@@ -65,6 +66,7 @@ chmod +x system
 chmod +x menu
 chmod +x ins-helium
 chmod +x xp
+chmod +x xraay
 cd
 #wget https://github.com/JebonRX/block-torrent-on-server/raw/main/btorrent.sh && chmod +x btorrent.sh && bash btorrent.sh
 echo ""
