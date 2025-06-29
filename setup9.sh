@@ -40,7 +40,7 @@ echo -e "${red}Please Insert The Correct License Key !${NC}"
 echo ""
 echo -e "Please Contact ${green}Admin${NC}"
 echo -e "Telegram : t.me/todfix667"
-rm -f setup2.sh
+rm -f setup9.sh
 exit 0
 fi
 clear
@@ -279,6 +279,6 @@ echo -e "    \e[1;32m|     SUCCESFULLY INSTALLED THE SCRIPT     |\e[0m"
 echo -e "    \e[1;32m'------------------------------------------'\e[0m"
 echo ""
 echo -e "   \e[1;32mYour VPS Will Be Automatical Reboot In 5 seconds\e[0m"
-rm -r setup2.sh
+rm -r setup9.sh
 sleep 5
 reboot
