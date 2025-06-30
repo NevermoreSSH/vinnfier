@@ -548,18 +548,18 @@ systemctl start xray@none
 systemctl restart xray@none
 
 # enable xray trojan ws
-systemctl enable xray@trojanws
-systemctl start xray@trojanws
-systemctl restart xray@trojanws
-systemctl enable xray@trnone
-systemctl start xray@trnone
-systemctl restart xray@trnone
+#systemctl enable xray@trojanws
+#systemctl start xray@trojanws
+#systemctl restart xray@trojanws
+#systemctl enable xray@trnone
+#systemctl start xray@trnone
+#systemctl restart xray@trnone
 
 # enable xray trojan
-systemctl daemon-reload
-systemctl enable xray@trojan
-systemctl start xray@trojan
-systemctl restart xray@trojan
+#systemctl daemon-reload
+#systemctl enable xray@trojan
+#systemctl start xray@trojan
+#systemctl restart xray@trojan
 
 # download script
 cd /usr/bin
