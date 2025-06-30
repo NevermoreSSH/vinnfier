@@ -232,7 +232,7 @@ echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
 }
 # TRIAL USER
-function menu2 () {
+function menu200 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess Ws None Tls" | cut -d: -f2|sed 's/ //g')"
@@ -429,7 +429,7 @@ echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
 }
 # FUCTION DELETE USER
-function menu3 () {
+function menu2 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#vms " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -472,7 +472,7 @@ echo " Expired On  : $exp"
 echo " =========================="
 }
 # FUCTION RENEW USER
-function menu4 () {
+function menu3 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#vms " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -518,7 +518,7 @@ echo " Expired On  : $exp4"
 echo " =========================="
 }
 # show user
-function menu5 () {
+function menu4 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess Ws None Tls" | cut -d: -f2|sed 's/ //g')"
@@ -713,7 +713,7 @@ echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
 }
 # FUCTION CEK USER
-function menu6 () {
+function menu5 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/config.json | grep '^#vms' | cut -d ' ' -f 2`); 
@@ -752,7 +752,7 @@ rm -rf /tmp/ipvmess.txt
 done
 }
 # ADD USER VLESS WS
-function menu7 () {
+function menu6 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vless Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless Ws None Tls" | cut -d: -f2|sed 's/ //g')"
@@ -828,7 +828,7 @@ echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
 }
 # TRIAL USER VLESS WS
-function menu8 () {
+function menu800 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vless Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless Ws None Tls" | cut -d: -f2|sed 's/ //g')"
@@ -899,7 +899,7 @@ echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
 }
 # DELETE USER VLESS WS
-function menu9 () {
+function menu7 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#vls " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -938,7 +938,7 @@ echo " Expired On  : $exp"
 echo " =========================="
 }
 #RENEW VLESS WS
-function menu10 () {
+function menu8 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#vls " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -984,7 +984,7 @@ echo " Expired On  : $exp4"
 echo " =========================="
 }
 # show user vless ws
-function menu11 () {
+function menu9 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vless Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless Ws None Tls" | cut -d: -f2|sed 's/ //g')"
@@ -1054,7 +1054,7 @@ echo -e "Expired   : $exp"
 echo -e "Script By $creditt"
 }
 # USER LOGIN VLESS WS
-function menu12 () {
+function menu10 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/config.json | grep '^#vls' | cut -d ' ' -f 2`);
@@ -1093,7 +1093,7 @@ rm -rf /tmp/ipvmess.txt
 done
 }
 # CREATE USER VLESS XTLS
-function menu13 () {
+function menu11 () {
 clear
 xtls="$(cat ~/log-install.txt | grep -w "Vless Tcp Xtls" | cut -d: -f2|sed 's/ //g')"
 echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
@@ -1161,7 +1161,7 @@ echo -e "Expired  : $exp"
 echo -e "Script By $creditt"
 }
 # TRIAL USER VLESS XTLS
-function menu14 () {
+function menu1400 () {
 clear
 xtls="$(cat ~/log-install.txt | grep -w "Vless Tcp Xtls" | cut -d: -f2|sed 's/ //g')"
 echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
@@ -1224,7 +1224,7 @@ echo -e "Expired  : $exp"
 echo -e "Script By $creditt"
 }
 # DELETE VLESS XTLS
-function menu15 () {
+function menu12 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -1262,7 +1262,7 @@ echo " Expired On  : $exp"
 echo " =========================="
 }
 # RENEW VLESS XTLS
-function menu16 () {
+function menu13 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -1308,7 +1308,7 @@ echo " Expired On  : $exp4"
 echo " =========================="
 }
 #SHOW VLESS XTLS
-function menu17 () {
+function menu14 () {
 clear
 xtls="$(cat ~/log-install.txt | grep -w "Vless Tcp Xtls" | cut -d: -f2|sed 's/ //g')"
 NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
@@ -1373,7 +1373,7 @@ echo -e "Expired    : $exp"
 echo -e "Script By $creditt"
 }
 # CEK USER LOGIN VLESS XTLS
-function menu18 () {
+function menu15 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/config.json | grep '^#vxtls' | cut -d ' ' -f 2`);
@@ -1418,20 +1418,20 @@ echo -e ""
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text   \e[30m═[\e[$box PANEL XRAY VMESS WEBSOCKET TLS\e[30m ]═   \e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "    \e[$number (•1)\e[m \e[$below Create Vmess Websocket Account\e[m"
+echo -e "    \e[$number (1)\e[m \e[$below Create Vmess Websocket Account\e[m"
 #echo -e "    \e[$number (•2)\e[m \e[$below Trial User Vmess Websocket\e[m"
-echo -e "    \e[$number (•2)\e[m \e[$below Delete Vmess Websocket Account\e[m"
-echo -e "    \e[$number (•3)\e[m \e[$below Renew Vmess Websocket Account\e[m"
-echo -e "    \e[$number (•4)\e[m \e[$below Show Config Vmess Account\e[m"
-echo -e "    \e[$number (•5)\e[m \e[$below Check User Login Vmess\e[m"
+echo -e "    \e[$number (2)\e[m \e[$below Delete Vmess Websocket Account\e[m"
+echo -e "    \e[$number (3)\e[m \e[$below Renew Vmess Websocket Account\e[m"
+echo -e "    \e[$number (4)\e[m \e[$below Show Config Vmess Account\e[m"
+echo -e "    \e[$number (5)\e[m \e[$below Check User Login Vmess\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total1} Client\e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text   \e[30m═[\e[$box PANEL XRAY VLESS WEBSOCKET TLS\e[30m ]═   \e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "    \e[$number (•6)\e[m \e[$below Create Vless Websocket Account\e[m"
+echo -e "    \e[$number (6)\e[m \e[$below Create Vless Websocket Account\e[m"
 #echo -e "    \e[$number (•8)\e[m \e[$below Trial User Vless Websocket\e[m"
-echo -e "    \e[$number (•7)\e[m \e[$below Deleting Vless Websocket Account\e[m"
+echo -e "    \e[$number (7)\e[m \e[$below Deleting Vless Websocket Account\e[m"
 echo -e "    \e[$number (8)\e[m \e[$below Renew Vless Websocket Account\e[m"
 echo -e "    \e[$number (9)\e[m \e[$below Show Config Vless Account\e[m"
 echo -e "    \e[$number (10)\e[m \e[$below Check User Login Vless\e[m"
