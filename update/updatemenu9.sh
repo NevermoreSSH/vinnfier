@@ -43,8 +43,17 @@ nameserver 1.0.0.3
 nameserver 2606:4700:4700::1113
 nameserver 2606:4700:4700::1003
 
-
 EOF
+
+cat << 'EOF' > /etc/sysctl.conf
+
+# Protection against SYN Flood
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_max_syn_backlog = 2048
+net.ipv4.tcp_synack_retries = 2
+EOF
+
+sysctl -p
 
 # download menu
 cd /usr/bin
