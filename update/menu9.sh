@@ -47,7 +47,7 @@ xtls=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 # TOTAL ACC CREATE  TROJAN GO
 trgo=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
 # TOTAL ACC CREATE  TROJAN WS TLS
-trws=$(grep -c -E "^### " "/usr/local/etc/xray/trojanws.json")
+trws=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
 # TOTAL ACC CREATE OVPN SSH
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 # PROVIDED
