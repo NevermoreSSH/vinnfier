@@ -81,8 +81,32 @@ chmod +x xp
 chmod +x port-xray
 chmod +x check-sc
 cd
-#sleep 10
+sleep 2
 #wget https://github.com/JebonRX/block-torrent-on-server/raw/main/btorrent.sh && chmod +x btorrent.sh && bash btorrent.sh
+# Hadkan Port dengan Firewall
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+
+# Allow SSH (ubah port jika perlu)
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+# Allow HTTP/HTTPS
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+
+# Allow Xray (contoh port 443 atau 8443)
+iptables -A INPUT -p tcp --dport 8443 -j ACCEPT
+
+# Allow localhost
+iptables -A INPUT -i lo -j ACCEPT
+
+# Allow established connections
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -m connlimit --connlimit-above 20 -j DROP
+iptables -A INPUT -p tcp --dport 443 -m recent --name ddos --set
+iptables -A INPUT -p tcp --dport 443 -m recent --name ddos --update --seconds 5 --hitcount 20 -j DROP
+sleep 2
 echo ""
 read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
 menu
