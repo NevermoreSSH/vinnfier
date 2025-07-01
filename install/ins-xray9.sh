@@ -270,19 +270,8 @@ cat> /usr/local/etc/xray/config.json << END
         "type": "field",
         "outboundTag": "socks_out",
         "domain": [
-          "netflix.com",
-          "netflix.net",
-          "nflximg.com",
-          "nflximg.net",
-          "nflxvideo.net",
-          "nflxso.net",
-          "nflxext.com",
-          "astro.com.my",
-          "amazonaws.com",
-          "ott-nav.com",
-          "ottnavigator.com",
-          "phind.com",
-          "github.com"
+          "waptrick.net",
+          "waptrick.com"
         ]
       },
       {
@@ -445,19 +434,8 @@ cat> /usr/local/etc/xray/none.json << END
         "type": "field",
         "outboundTag": "socks_out",
         "domain": [
-          "netflix.com",
-          "netflix.net",
-          "nflximg.com",
-          "nflximg.net",
-          "nflxvideo.net",
-          "nflxso.net",
-          "nflxext.com",
-          "astro.com.my",
-          "amazonaws.com",
-          "ott-nav.com",
-          "ottnavigator.com",
-          "phind.com",
-          "github.com"
+          "waptrick.net",
+          "waptrick.com"
         ]
       },
       {
