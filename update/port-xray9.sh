@@ -27,13 +27,13 @@ exit 0
 fi
 cek=$(netstat -nutlp | grep -w $tls1)
 if [[ -z $cek ]]; then
-sed -i "s/$xtls/$tls1/g" /usr/local/etc/xray/config.json
+sed -i "s/$tls/$tls1/g" /usr/local/etc/xray/config.json
 sed -i "s/   - Xray Vmess Ws Tls       : $tls/   - Xray Vmess Ws Tls       : $tls1/g" /root/log-install.txt
 sed -i "s/   - Xray Vless Ws Tls       : $tls/   - Xray Vless Ws Tls       : $tls1/g" /root/log-install.txt
 sed -i "s/   - Xray Vless Tcp Xtls     : $tls/   - Xray Vless Tcp Xtls     : $tls1/g" /root/log-install.txt
 sed -i "s/   - Xray Trojan Tcp Tls     : $tls/   - Xray Trojan Tcp Tls     : $tls1/g" /root/log-install.txt
-iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $xtls -j ACCEPT
-iptables -D INPUT -m state --state NEW -m udp -p udp --dport $xtls -j ACCEPT
+iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $tls -j ACCEPT
+iptables -D INPUT -m state --state NEW -m udp -p udp --dport $tls -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $tls1 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport $tls1 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
